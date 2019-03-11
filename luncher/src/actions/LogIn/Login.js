@@ -11,5 +11,3 @@ export const login = creds => dispatch => {
       dispatch({ type: LOGIN_SUCCESS, payload: res.data.payload });
     });
   };
-
-  //test ///TEST
