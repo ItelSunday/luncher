@@ -1,4 +1,5 @@
 import React from 'react'
+import '../Authorization/AuthLogin.css';
 import {connect} from 'react-redux';
 
 import { login } from '../../actions/LogIn/Login';
@@ -24,7 +25,7 @@ class Login extends React.Component {
         e.preventDefault();
         this.props
           .login(this.state.credentials)
-          .then(() => this.props.history.push('/login'));
+        //   .then(() => this.props.push('/login')); 
       };
 
 
