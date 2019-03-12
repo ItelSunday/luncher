@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
+//Log In
+import LogIn from './components/Authorization/AuthLogin'
+
 import AdminView from './components/views/AdminView';
 import './App.css';
 
@@ -10,7 +13,7 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          !SanityCheck
+        <Route path="/login" component={LogIn} />
           <Route path="/admin-view" component={AdminView} />
         </div>
       </Router>
