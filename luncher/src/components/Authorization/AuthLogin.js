@@ -20,26 +20,33 @@ class Login extends React.Component {
         });
       };
 
+      login = e => {
+        e.preventDefault();
+        this.props
+          .login(this.state.credentials)
+          .then(() => this.props.history.push('/login'));
+      };
+
 
     render() {
         return (
             <div className="login-form">
         <form onSubmit={this.login}>
-          <label for="username">Account</label>
+          <label for="username">Username</label>
           <input
             type="text"
             name="username"
             placeholder="Username"
             value={this.state.credentials.username}
-            // onChange={}
+            onChange={this.handleChange}
           />
           <label for="password">Password</label>
           <input
             type="password"
             name="password"
-            placeholder=""
-            value={this.state.credentials.username}
-            // onChange={}
+            placeholder="Password"
+            value={this.state.credentials.password}
+            onChange={this.handleChange}
           />
           <button>
           Login

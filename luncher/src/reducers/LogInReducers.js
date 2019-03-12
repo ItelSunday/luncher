@@ -3,8 +3,9 @@ import { LOGIN_START,
 
 
 const initialState ={
-    logIn: false,
+    loggingIn: false,
     error: '',
+    token: localStorage.getItem('token')
 };
 
 const reducer = (state = initialState, action) => {
@@ -18,7 +19,7 @@ const reducer = (state = initialState, action) => {
         case LOGIN_SUCCESS:
         return {
             ...state,
-            logIn: false,
+            loggingIn: false,
             token: action.payload
         };
 
