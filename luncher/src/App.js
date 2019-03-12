@@ -10,7 +10,7 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          !Sanitysdfsdfsd
+          !SanityCheck
           <Route path="/admin-view" component={AdminView} />
         </div>
       </Router>
