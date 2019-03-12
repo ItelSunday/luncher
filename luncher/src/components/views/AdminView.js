@@ -18,7 +18,7 @@ class AdminView extends React.Component {
                     <h3>School Admin Name</h3>
                     <Link to="/add-school-form">Add School</Link>
                 </header>
-                <Route path="/add-school-form" render={ props => <AddSchoolForm {...props} /> } />
+                <Route path="/add-school-form" render={ props => <AddSchoolForm  /> } />
             </div>
         )
     }
