@@ -6,7 +6,7 @@ import {
 
 
 const initialState = {
-    schools: [],
+    schools: {},
     isfetchingSchools: false,
     error: ''
 }
@@ -27,7 +27,6 @@ export const publicReducer = (state = initialState, action) => {
           return {
             ...state,
             schools: action.payload,
-            isfetchingSchools: false,
             error: null
           };
     

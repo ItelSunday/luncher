@@ -15,7 +15,6 @@ class App extends Component {
         <div className="App">
         
         <Link to="/public">Public Page</Link>
-          !Sanitysdfsdfsd
           <Route path="/public" component={PublicView} />
           <Route path="/admin-view" component={AdminView} />
         </div>

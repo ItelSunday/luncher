@@ -3,7 +3,8 @@ import { connect } from 'react-redux';
 import { publicReducer } from '../../actions/publicActions';
 
 const SchoolsPublic =  props => {
-    const { schoolName } = props.publicReducer;
+    console.log(props, "shcoolpublic")
+    const { schoolName } = props;
 
     return (
       <div>
@@ -13,10 +14,9 @@ const SchoolsPublic =  props => {
  
 }
 
-// export default SchoolsPublic;
 
 const mapStateToProps = state => ({
-    school: state.publicReducer.schools
+    schools: state.schools
 })
 
 
