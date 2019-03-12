@@ -22,6 +22,9 @@ ReactDOM.render(
         <App />
     </Provider>,
  document.getElementById('root'));
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 20870adfe56274312d3c4bd7aa539388a3dd2129
