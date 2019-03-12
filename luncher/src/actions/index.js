@@ -1,6 +1,14 @@
-export {
-    FETCHING_SCHOOLS,
-    FETCHING_SCHOOLS_SUCCESS,
-    FETCHING_SCHOOLS_FAILURE,
-    publicReducer
-} from './publicActions';
+
+import { combineReducers } from 'redux';
+import { admin } from './Admin';
+import { login } from './LogIn/LogIn';
+
+
+export default combineReducers({
+    admin,
+    login
+    
+})
+
+
+
