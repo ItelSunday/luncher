@@ -13,9 +13,7 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-        
-        <Link to="/public">Public Page</Link>
-          <Route path="/public" component={PublicView} />
+          <Route path="/" component={PublicView} />
           <Route path="/admin-view" component={AdminView} />
         </div>
       </Router>

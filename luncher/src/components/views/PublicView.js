@@ -1,41 +1,48 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { publicReducer} from '../../actions/publicActions';
-import SchoolsPublic from '../PublicSchools/SchoolsPublic';
-import uuidv4 from 'uuid'
-
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { publicReducer } from "../../actions/publicActions";
+import uuidv4 from "uuid";
 
 class PublicView extends Component {
-
-   componentWillMount() {
-       this.props.publicReducer();
-       console.log(this.props, "public view")
-   } 
+  componentWillMount() {
+    this.props.publicReducer();
+    console.log(this.props, "public view");
+  }
 
   render() {
-    console.log(this.props, "here")
-   return (
+    console.log("HERE", this.props);
+    return (
+      <div className="school-list">
 
-      <div className="shcool-list">
-        {this.props.schools.map(school => (
-             
-               <div>{school.schoolName}</div>
-            
-        ))}          
-        <h1>hi</h1>
+        {this.props.isfetchingSchools ? (
+          <h1>Loading...</h1>
+        ) : (
+          <div>
+            {this.props.schools.map(school => { 
+              return (
+                  <>
+                  <div><strong>School Name: </strong>{school.schoolName}</div>
+                  <div><strong>School descripton: </strong>{school.details}</div>
+                  <div><strong>Amount needed: </strong>{school.needAmount}</div>
+                  </>
+              );
+            })}
+          </div>
+        )}
       </div>
-    )
+    );
   }
 }
 
-
-// export default PublicView;
-
-const mapStateToPtops = state => ({
-    schools: state.schools
-});
+const mapStateToProps = state => {
+  console.log("STATE", state.publicReducer);
+  return {
+    schools: state.publicReducer.schools,
+    isfetchingSchools: state.publicReducer.isfetchingSchools
+  };
+};
 
 export default connect(
-    mapStateToPtops,
-    { publicReducer }
+  mapStateToProps,
+  { publicReducer }
 )(PublicView);
