@@ -15,20 +15,12 @@ import App from './App';
 import rootReducer from "./reducers";
 
 
-<<<<<<< HEAD
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-const store = createStore(
-  rootReducer,
-  composeEnhancers(applyMiddleware(thunk, logger))
-);
-=======
 const persistConfig = {
   key: "root",
   storage
 };
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
->>>>>>> d3078d338a936303c717236db601f35199ba9cfe
 
 //const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(persistedReducer, applyMiddleware(thunk, logger));
@@ -36,13 +28,6 @@ const persistor = persistStore(store);
 
 const rootElement = document.getElementById('root');
 ReactDOM.render(
-<<<<<<< HEAD
-    <Provider store={store}>
-      <Router>
-        <App />
-      </Router>
-    </Provider>,
-=======
   <Provider store={store}>
   <PersistGate loading={null} persistor={persistor}>
     <Router>
@@ -50,6 +35,5 @@ ReactDOM.render(
     </Router>
   </PersistGate>
 </Provider>,
->>>>>>> d3078d338a936303c717236db601f35199ba9cfe
 rootElement
 );
