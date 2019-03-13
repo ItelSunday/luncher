@@ -15,6 +15,9 @@ export const FETCHING_SCHOOLS_FAILURE = "FETCHING_SCHOOLS_FAILURE";
 export const FETCH_SCHOOLS_START = 'FETCH_SCHOOLS_START';
 export const FETCH_SCHOOLS_SUCCESS = 'FETCH_SCHOOLS_SUCCESS';
 export const FETCH_SCHOOLS_FAILURE = 'FETCH_SCHOOLS_FAILURE';
+export const DELETE_SCHOOL_START = 'DELETE_SCHOOL_START';
+export const DELETE_SCHOOL_SUCCESS = 'DELETE_SCHOOL_SUCCESS';
+export const DELETE_SCHOOL_FAILURE = 'DELETE_SCHOOL_FAILURE';
 
 
 export const login = creds => dispatch => {
@@ -33,10 +36,10 @@ export const logout = () => {
   };
 
 
-export const getSchools = () => dispatch => {
+export const getSchools = id => dispatch => {
     dispatch({ type: FETCH_SCHOOLS_START });
     axios
-        .get('https://luncher-server.herokuapp.com/admin/:id', {
+        .get(`https://luncher-server.herokuapp.com/api/admin`, {
             headers: { Authorization: localStorage.getItem('token') }
         })
         .then(res => res.data)
@@ -47,6 +50,23 @@ export const getSchools = () => dispatch => {
         .catch(err => {
             dispatch({ type: FETCH_SCHOOLS_FAILURE, payload: err });
         })
+}
+
+export const deleteSchool = id => {
+    const deletedSchool = axios
+        .delete(`https://luncher-server.herokuapp.com/api/admin/${id}`, {
+            headers: { Authorization: localStorage.getItem('token') } 
+        });
+    return dispatch => {
+        dispatch({ type: DELETE_SCHOOL_START });
+        deletedSchool
+        .then(schools => {
+            dispatch({ type: DELETE_SCHOOL_SUCCESS, payload: schools });
+        })
+        .catch(err => {
+            dispatch({ type: DELETE_SCHOOL_FAILURE, payload: err });
+        })
+    }
 }
 
 

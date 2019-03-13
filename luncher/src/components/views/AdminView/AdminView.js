@@ -18,7 +18,7 @@ const AdminView = props => {
           <Link to="/add-school-form">Add School</Link>
         </header>
         <div>
-          <SchoolList />
+          <SchoolList deleteSchool={props.deleteSchool} />
           />
         </div>
       </div>
@@ -28,7 +28,8 @@ const AdminView = props => {
 
 const mapStateToProps = state => {
   return {
-    logout: state.loginReducer.logout
+    logout: state.loginReducer.logout,
+    deleteSchool: state.adminReducer.deleteSchool
   };
 };
 

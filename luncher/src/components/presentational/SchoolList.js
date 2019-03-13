@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import * as Icon from 'react-feather';
 
-import { getSchools } from '../../actions';
+import { getSchools, deleteSchool } from '../../actions';
 
 class SchoolList extends React.Component {
 
@@ -16,7 +16,7 @@ class SchoolList extends React.Component {
                 {this.props.schools.map(school => (
                     <div className="adminSchoolList" key={school.id}>
                         <h4>{school.schoolName}</h4>
-                        <Icon.Trash2 className="icon"/>
+                        <Icon.Trash2 onClick={() => this.props.deleteSchool(school.id)} />
                     </div>
                 ))}
             </div>
@@ -29,8 +29,9 @@ const mapStateToProps = state => {
     return {
         schools: state.adminReducer.schools,
         getSchools: state.adminReducer.getSchools,
-        error: state.adminReducer.error
+        error: state.adminReducer.error,
+        deleteSchool: state.adminReducer.deleteSchool
     }
 }
 
-export default connect(mapStateToProps, {getSchools})(SchoolList)
+export default connect(mapStateToProps, {getSchools, deleteSchool })(SchoolList)
