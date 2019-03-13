@@ -1,6 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
+import '../Authorization/AuthLogin.css';
+import luncherLogo from '../../assets/luncherLogo.png'
 import { login } from '../../actions';
 
 class LoginForm extends React.Component {
@@ -24,10 +26,13 @@ class LoginForm extends React.Component {
     }
      render() {
          return (
-             <div>
+            <div className="login-form">
                  <form onSubmit={e => this.handleLogin(e)}>
+                 <img src= {luncherLogo} width="40" height="40" alt=""/>
+                        <label for="username">Username</label>
                     <input required type="text" name="username" value={this.state.username}
                         onChange={this.handleChange} placeholder="Username" />
+                        <label for="password">Password</label>
                     <input required type="password" name="password" value={this.state.password}
                         onChange={this.handleChange} placeholder="Password" />
                     <button type="submit">Sign In</button>
