@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import * as Icon from 'react-feather';
 
 import { getSchools } from '../../actions';
 
@@ -13,8 +14,9 @@ class SchoolList extends React.Component {
         return (
             <div>
                 {this.props.schools.map(school => (
-                    <div key={school.id}>
+                    <div className="adminSchoolList" key={school.id}>
                         <h4>{school.schoolName}</h4>
+                        <Icon.Trash2 className="icon"/>
                     </div>
                 ))}
             </div>
