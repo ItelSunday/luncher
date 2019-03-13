@@ -2,10 +2,10 @@
 Client-side of Luncher app
 
 # By The Luncher Team
-- Frontend Developer: 
-- Backend Developer: 
-- UI Developer: 
-- Team Leader: 
+- Frontend Developer: Julian Moreno, Itel Domingo, Cori Peck
+- Backend Developer: Rodolfo Mejia
+- UI Developer: Andrew Safran
+- Team Leader: Jasmin Galang
 
 ## To view this app online
 
@@ -17,9 +17,10 @@ Client-side of Luncher app
 
 ## Features
 - A front-end platform built with React, Redux, React Router, Axios 
-- Sign up and log into your own account
--
--
+- The admin has the ability to sign in and sign out
+- The admin has the ability to view, create, edit and delete profile for the list of schools in need
+- Donors will be able to donate to the list of schools in need
+
 
 ## Technologies for this project
 
