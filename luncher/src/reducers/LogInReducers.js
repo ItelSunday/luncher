@@ -1,4 +1,4 @@
-import { LOGIN_START, LOGIN_SUCCESS, LOGIN_FAILURE } from "../actions";
+import { LOGIN_START, LOGIN_SUCCESS, LOGIN_FAILURE, LOGOUT } from "../actions";
 
 
 const initialState ={
@@ -33,6 +33,14 @@ export const loginReducer = (state = initialState, action) => {
             logIn: false,
             error: action.payload
         }
+
+        case LOGOUT:
+        localStorage.removeItem("token");
+        return {
+          ...state,
+          loggedIn: false,
+          token: ""
+        };
 
         default:
         return state;
