@@ -1,27 +1,21 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-
-import AdminView from './components/views/AdminView';
-import PublicView from './components/views/PublicView';
+import { Route } from 'react-router-dom';
 import './App.css';
+import { HomeView } from './components/views/HomeView';
+import PublicView from './components/views/PublicView';
+
 
 
 class App extends Component {
- 
-
   render() {
     return (
-      <Router>
         <div className="App">
-        
-        <Link to="/public">Public Page</Link>
-          !Sanitysdfsdfsd
-          <Route path="/public" component={PublicView} />
-          <Route path="/admin-view" component={AdminView} />
+           <Route exact path="/" component={PublicView} />
+           <Route exact  path="/home" component={HomeView} />
         </div>
-      </Router>
     );
   }
 }
+
 
 export default App;
