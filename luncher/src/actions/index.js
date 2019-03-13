@@ -27,10 +27,16 @@ export const login = creds => dispatch => {
         .catch(err => dispatch({ type: LOGIN_FAILURE, payload: err.data }))
   };
 
+
+export const logout = () => {
+    return { type: LOGOUT };
+  };
+
+
 export const getSchools = () => dispatch => {
     dispatch({ type: FETCH_SCHOOLS_START });
     axios
-        .get('https://luncher-server.herokuapp.com/api/schools', {
+        .get('https://luncher-server.herokuapp.com/admin/:id', {
             headers: { Authorization: localStorage.getItem('token') }
         })
         .then(res => res.data)
@@ -63,6 +69,3 @@ export const publicReducer = () => dispatch => {
   };
 
 
-  export const logout = () => {
-    return { type: LOGOUT };
-  };
