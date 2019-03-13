@@ -35,10 +35,10 @@ export const logout = () => {
   };
 
 
-export const getSchools = () => dispatch => {
+export const getSchools = id => dispatch => {
     dispatch({ type: FETCH_SCHOOLS_START });
     axios
-        .get('https://luncher-server.herokuapp.com/admin/:id', {
+        .get(`https://luncher-server.herokuapp.com/api/admin`, {
             headers: { Authorization: localStorage.getItem('token') }
         })
         .then(res => res.data)
@@ -53,7 +53,9 @@ export const getSchools = () => dispatch => {
 
 export const deleteSchool = id => {
     const deletedSchool = axios
-        .delete('https://luncher-server.herokuapp.com/api/admin/:id', { schools: { id }});
+        .delete(`https://luncher-server.herokuapp.com/api/admin/${id}`, {
+            headers: { Authorization: localStorage.getItem('token') } 
+        });
     return dispatch => {
         dispatch({ type: DELETE_SCHOOL_START });
         deletedSchool
