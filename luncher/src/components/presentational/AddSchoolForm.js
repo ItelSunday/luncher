@@ -8,8 +8,8 @@ class AddSchoolForm extends React.Component {
             <form onSubmit={e => this.handleSubmit(e)}>
                 <input type="text" name="school_name" value={''} 
                         placeholder="School Name" onChange={this.handleChange} />
-                <input type="text" name="need_amount" value={''}
-                        palceholder="School Need Amount" onChange={this.handleChange} />
+                <span>$</span><input type="number" min="0.01" step="0.01" name="need_amount" value={''}
+                        placeholder="School Need Amount" onChange={this.handleChange} />
                 <input type="number" name="school_id" value={''}
                         placeholder="School ID" onChange={this.handleChange} />
                 <button type="submit">Save School</button>
