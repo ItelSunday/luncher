@@ -6,7 +6,6 @@ import PublicView from './components/views/PublicView';
 import AddSchoolForm from './components/presentational/AddSchoolForm';
 
 
-
 class App extends Component {
   render() {
     return (
