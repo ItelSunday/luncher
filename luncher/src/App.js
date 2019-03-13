@@ -18,7 +18,7 @@ class App extends Component {
         </div>
     );
   }
-} //push
+}
 
 
 export default App;
