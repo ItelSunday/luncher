@@ -4,6 +4,8 @@ export const LOGIN_START = 'LOGIN_START';
 export const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
 export const LOGIN_FAILURE = 'LOGIN_FAILURE';
 
+export const LOGOUT = "LOGOUT";
+
 // Public
 export const FETCHING_SCHOOLS = "FETCHING_SCHOOLS";
 export const FETCHING_SCHOOLS_SUCCESS = "FETCHING_SCHOOLS_SUCCESS";
@@ -61,3 +63,6 @@ export const publicReducer = () => dispatch => {
   };
 
 
+  export const logout = () => {
+    return { type: LOGOUT };
+  };
