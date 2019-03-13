@@ -42,7 +42,6 @@ export const adminReducer = (state = initialState, action) => {
         case DELETE_SCHOOL_SUCCESS:
             return {
                 ...state,
-                schools: [...action.payload],
                 deletingSchool: false,
                 error: ''
             }
