@@ -2,7 +2,7 @@ import {
     FETCHING_SCHOOLS,
     FETCHING_SCHOOLS_SUCCESS,
     FETCHING_SCHOOLS_FAILURE
-  } from "../actions/publicActions";
+  } from "../actions/";
   
   const initialState = {
     schools: [],
@@ -16,7 +16,6 @@ import {
         console.log("publicReducers", state);
         return {
           ...state,
-          // schools: action.payload,
           isfetchingSchools: true,
           error: null
         };

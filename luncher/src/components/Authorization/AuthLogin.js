@@ -1,68 +1,22 @@
-import React from 'react'
-import '../Authorization/AuthLogin.css';
-import {connect} from 'react-redux';
+import React from 'react';
+import { LoginView } from '../views/LoginView/index';
+import { connect } from 'react-redux';
+import { AdminView } from '../views/AdminView/index';
 
-import { login } from '../../actions/LogIn/Login';
 
-class Login extends React.Component {
-    state = {
-        credentials : {
-            username: '',
-            password: ''
+const authenticate = AdminView => LoginView =>
+    class extends React.Component {
+        render () {
+            return this.props.loggedIn ? (
+                <AdminView match={this.props.math} history={this.props.history} />
+            ) : (
+                <LoginView match={this.props.match} history={this.props.history} />
+            );
         }
-    };
-
-    handleChange = e => {
-        this.setState({
-          credentials: {
-            ...this.state.credentials,
-            [e.target.name]: e.target.value
-          }
-        });
-      };
-
-      login = e => {
-        e.preventDefault();
-        this.props
-          .login(this.state.credentials)
-        //   .then(() => this.props.push('/login')); 
-      };
-
-
-    render() {
-        return (
-            <div className="login-form">
-        <form onSubmit={this.login}>
-          <label for="username">Username</label>
-          <input
-            type="text"
-            name="username"
-            placeholder="Username"
-            value={this.state.credentials.username}
-            onChange={this.handleChange}
-          />
-          <label for="password">Password</label>
-          <input
-            type="password"
-            name="password"
-            placeholder="Password"
-            value={this.state.credentials.password}
-            onChange={this.handleChange}
-          />
-          <button>
-          Login
-          </button>
-        </form>
-      </div>
-        );
     }
-}
 
-const mapStateToProps = ({error, loggingIn}) => ({
-    error, loggingIn
-});
+    const mapStateToProps = state => ({
+        loggedIn: state.loginReducer.loggedIn
+    });
 
-export default connect(
-    mapStateToProps,
-    {login}
-) (Login);
+export default connect(mapStateToProps)(authenticate(AdminView)(LoginView));
