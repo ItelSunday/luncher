@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { publicReducer } from "../../actions";
 import SchoolCard from './SchoolCard';
-import { Route } from 'react-router-dom';
 import uuidv4 from "uuid";
 
 class PublicView extends Component {
@@ -25,11 +24,7 @@ class PublicView extends Component {
             {this.props.schools.map(school => { 
               return (
                   <div className="school-card" key={uuidv4()}> 
-                  <h3>{school.schoolName}</h3>
-                  <hr />
-                  <p><strong>Description: </strong>{school.details}<br/>
-                  <strong>Amount needed: </strong>${school.needAmount}</p>
-                  <Route exact path="/school" component={SchoolCard} />
+                    <SchoolCard school={school}/>
                   </div>
               );
             })}
