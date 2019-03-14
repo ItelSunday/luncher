@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import * as Icon from 'react-feather';
 import { Link } from 'react-router-dom';
 import { getSchools, deleteSchool } from '../../actions';
 
@@ -25,11 +24,10 @@ class SchoolList extends React.Component {
         return (
             <div className="school-tab">
                 {this.props.schools.map(school => (
-                    <Link to="/update" className="adminSchoolList" key={school.id}>
+                    <Link to={`/school/${school.id}`} className="adminSchoolList" key={school.id}>
                         <h4>{school.schoolName}</h4>
                         <p>${school.needAmount}</p>
                         <p>{school.details}</p>
-                        <Icon.Trash2 onClick={() => this.props.deleteSchool(school.id)} />
                     </Link>
                 ))}
             </div>

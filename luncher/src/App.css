@@ -571,3 +571,42 @@ form .cvv {
   border: 2px solid #ff9980;
   box-shadow: 1px 1px 1px 2px #9c9c9c;
 }
+
+
+/* Single school card */
+
+.singleschool-container {
+  padding-top: 100px;
+}
+
+.singleschool-container .school-card {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border: 1px solid  #efefef;
+}
+
+.singleschool-container .school-card h1 {
+  font-size: 18px;
+}
+
+.button-singleschool {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.button-singleschool button {
+  margin-top: 10px;
+  width: 100px;
+  background: #FF7A59;
+  padding: 7px 30px;
+  border: 1px solid #FF7A59;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  
+}

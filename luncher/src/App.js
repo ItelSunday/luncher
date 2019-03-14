@@ -5,9 +5,9 @@ import { HomeView } from './components/views/HomeView';
 import PublicView from './components/views/PublicView';
 import DonateForm from './components/views/DonateForm';
 import AddSchoolForm from './components/presentational/AddSchoolForm';
-import School from '../src/components/presentational/School';
-import UpdateSchoolForm from './components/presentational/UpdateSchoolForm';
+import School from "./components/presentational/School";
 import ThankYou from './components/views/ThankYou';
+import UpdateSchoolForm from './components/presentational/UpdateSchoolForm';
 
 
 class App extends Component {
@@ -28,9 +28,9 @@ class App extends Component {
            <Route exact  path="/login" component={HomeView} />
            <Route path="/add-school-form" component={AddSchoolForm} />
            <Route path="/school/:id" component={School} />
-           <Route path="/update" component={UpdateSchoolForm} />
            <Route exact path="/donate-form" component={DonateForm} />
            <Route exact path="/thank-you" component={ThankYou} />
+           <Route path="/update/:id" component={UpdateSchoolForm} />
           </Switch>
           <footer>
           <Link to="/login" className="bnt-donate" >{(<button><i className="fas fa-key"></i> Admin Login</button>)}</Link>
