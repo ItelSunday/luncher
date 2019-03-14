@@ -4,85 +4,92 @@
 
 /* Navigation Bar */
 header {
-  background: #4DB3AF;
   display: flex;
   justify-content: space-between;
   padding: 10px;
   position: fixed;
-  top: 0;
   width: 100%;
+  background: #4DB3AF;
 }
 
-@media (max-width: 500px) {
+@media (min-width: 300px) and (max-width: 500px){
   header {
+    padding: 0;
     flex-direction: column;
     align-items: center;
-    position: static;
   }
 }
-header a {
-  font-size: 1.6rem;
+
+@media (min-width: 301px) and (max-width: 800px){
+  header {
+    padding: 0;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+header a{
   text-decoration: none;
-  color: white;
   font-size: 2rem;
+  color: #ffff;
 }
-@media (max-width: 500px) {
+
+@media (min-width: 300px) and (max-width: 500px){
   header a {
-    margin-top: 15px;
-    font-size: 3.6rem;
+    margin: 0 4px;
+    justify-content: right;
+    font-size: 0.8rem;
   }
 }
+@media (min-width: 301px) and (max-width: 800px){
+  header a {
+    margin: 0 10px;
+    justify-content: right;
+    justify-items: right;
+    font-size: 1.5rem;
+  }
+}
+
 header .head-luncher {
   font-size: 3.6rem;
   margin-left: 5%;
 }
-@media (max-width: 500px) {
+@media (min-width: 300px) and (max-width: 500px){
   header .head-luncher {
-    margin-left: 0;
-    font-size: 6rem;
+    display: none; 
   }
 }
-header .nav-link {
-  padding-top: 7px;
+@media (min-width: 501px) and (max-width: 800px){
+  header .head-luncher {
+    margin-left: 0;
+  }
 }
+
+header .nav-link {
+  padding: 8px 8px;
+}
+
 header nav {
   display: flex;
   justify-content: space-around;
   width: 45%;
   margin-right: 5%;
 }
-@media (max-width: 500px) {
-  header nav {
-    flex-direction: column;
-    align-items: center;
-    margin-right: 0;
-    width: 95%;
-  }
-}
+
 header .nav-btn {
-  background: #FF7A59;
-  padding: 7px 30px;
-  border: 2px solid #FF7A59;
-  color: white;
-  font-size: 2rem;
   border-radius: 5px;
-  text-decoration: none;
+  background: #FF7A59;
+  border: 3px solid #FF7A59;
 }
+
+
 header .nav-btn:hover {
   background: white;
   color: #33475B;
   border: 2px solid white;
   box-shadow: 1px 1px 1px 2px #9c9c9c;
 }
-@media (max-width: 500px) {
-  header .nav-btn {
-    margin-bottom: 10px;
-    font-size: 3.6rem;
-    height: 42px;
-    width: 60%;
-    padding: 0 17%;
-  }
-}
+
 
 .navBar {
   display: flex;

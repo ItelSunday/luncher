@@ -19,8 +19,8 @@ body,
   height: 100vh;
   background: linear-gradient(
       120deg,
-      rgb(132, 250, 176, 0.45),
-      rgb(89, 218, 184, 0.45)
+      rgba(132, 250, 176, 0.45),
+      rgba(89, 218, 184, 0.45)
     ),
     url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=709&amp;q=80')
       no-repeat fixed center;
@@ -29,14 +29,24 @@ body,
   justify-content: center;
   align-items: center;
 }
+@media (min-width: 300px) and (max-width: 500px){
+  .login-form {
+    padding-top: 50px; 
+  }
+}
+
+@media (min-width: 501px) and (max-width: 800px){
+  .login-form {
+    padding: 120px 0 0 0; 
+  }
+}
 
 .login-form form {
   display: flex;
   flex-flow: column nowrap;
-  width: 350px;
-  height: 300px;
-
-  
+  width: 290px;
+  height: 499px;
+  margin-top: 50px;
   padding: 50px 35px;
   background-color:#fafafa;
   border-radius: 6px;
@@ -55,52 +65,73 @@ body,
   margin: 20px 0;
   border: none;
   border-radius: 16px;
-  padding: 3px 10px;
+  padding: 20px;
   background-color:var(--form-white);
+  box-shadow: rgba(131, 228, 167, 0.45) 0px 4px 30px 0px;
 }
 
 .userlogo::placeholder {
-  background-image: url('../../assets/user.png');
-  background-repeat: no-repeat;
   font-size: 17px;
-  text-indent: 40px;
+  color: #bdbdbd;
+}
+.passlogo::placeholder {
+  font-size: 17px;
   color: #bdbdbd;
 }
 
-.passlogo::placeholder {
-  background-image: url('../../assets/lock.png');
-  background-repeat: no-repeat;
-  font-size: 17px;
-  text-indent: 40px;
-  color: #bdbdbd;
-}
-.login-form
-input:focus,
+.login-form 
+input:focus, 
 .login-form
 input:active {
   outline: none;
-
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
 }
+
+input [type=text] {
+  transition: all 35s ease-in-out;
+}
+
+
 
 .login-form > form > button {
   border: none;
-  margin: 4px 0;
-  padding: 6px;
+  margin: 20px 0 0 0;
+  padding: 18px;
   border-radius: 18px;
   font-size: 16px;
   font-weight: bold;
+  text-transform: uppercase;
   background-color: var(--primary-color);
   border: 1px solid #ff7a59;
   color: #ffff;
 }
 
+.login-form button:hover {
+  transition: all 0.4s ease 0s;
+  background: rgb(250, 97, 58);
+  box-shadow: rgba(255, 122, 89, 0.518) 0px 10px 30px 0px;
+  border-radius: 25px;
+}
+
 .luncherlogo{
-  display: flex;
+  /* top: 0; */
+  margin: 0 auto;
+  border: 6px solid #ff7a59;
+  border-radius: 50%;
+	width: 200px;
+  height: 400px;
   justify-content: center;
   align-items: center;
 }
 
-.luncherlogo h1{
-  margin: 0 0 0 10px ; 
+.luncherlogo img{
+  margin: 0 auto;
+  padding: 20px 0 0 0;
 }
+
+.login-form h1{
+  margin: 10px 0 0 0 10px;
+  color: #495057;  
+}
+
 

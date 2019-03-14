@@ -29,10 +29,10 @@ class LoginForm extends React.Component {
       <div className="login-form">
         <form onSubmit={e => this.handleLogin(e)}>
         <div className="luncherlogo" >
-          <img src={luncherLogo} width="40" height="40" alt="" />
-          <h1> Log in </h1>
+          <img src={luncherLogo} width="120" height="109" alt="" />
         </div>
-          <label htmlFor="username">Username</label>
+        <h1> Admin Login </h1>
+          <label htmlFor="username"></label>
           <input className="userlogo"
             required
             type="text"
@@ -41,7 +41,7 @@ class LoginForm extends React.Component {
             onChange={this.handleChange}
             placeholder="Username"
           />
-          <label htmlFor="password">Password</label>
+          <label htmlFor="password"></label>
           <input className="passlogo"
             required
             type="password"

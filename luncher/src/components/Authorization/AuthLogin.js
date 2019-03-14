@@ -8,7 +8,7 @@ const authenticate = AdminView => LoginView =>
     class extends React.Component {
         render () {
             return this.props.loggedIn ? (
-                <AdminView match={this.props.math} history={this.props.history} />
+                <AdminView match={this.props.match} history={this.props.history} />
             ) : (
                 <LoginView match={this.props.match} history={this.props.history} />
             );
