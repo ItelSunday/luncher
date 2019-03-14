@@ -33,7 +33,7 @@ class App extends Component {
            <Route exact path="/thank-you" component={ThankYou} />
           </Switch>
           <footer>
-          <Link to="/login" className="bnt-donate" >{(<button><i className="fas fa-key"></i> Login</button>)}</Link>
+          <Link to="/login" className="bnt-donate" >{(<button><i className="fas fa-key"></i> Admin Login</button>)}</Link>
             <p>Copyright 2019 - Luncher</p>
         </footer>
         </div>

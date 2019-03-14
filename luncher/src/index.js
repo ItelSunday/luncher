@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { HashRouter , BrowserRouter as Router } from 'react-router-dom';
 import thunk from 'redux-thunk';
 import logger from 'redux-logger';
 
@@ -29,9 +29,9 @@ const rootElement = document.getElementById('root');
 ReactDOM.render(
   <Provider store={store}>
   <PersistGate loading={null} persistor={persistor}>
-    <Router>
+    <HashRouter>
       <App />
-    </Router>
+    </HashRouter>
   </PersistGate>
 </Provider>,
 rootElement
