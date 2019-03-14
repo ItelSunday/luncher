@@ -449,14 +449,15 @@ form .cvv {
 /* Add School form */
 
 .add-school {
-  background:linear-gradient(
+  /* background:linear-gradient(
     rgba(0, 0, 0, 0.4), 
     rgba(0, 0, 0, 0.4)
-  ), url("./assets/apple.jpg") no-repeat bottom;
-  background-size: cover;
-  background-attachment: fixed;
+  ), url("./assets/apple.jpg") no-repeat bottom; */
+  /* background-size: cover; */
+  /* background-attachment: fixed; */
   padding: 250px 10px;
-  min-height: 100vh;
+  min-height: 40vh;
+  background-color: #efefef;
 }
 
 
@@ -582,26 +583,30 @@ form .cvv {
 .singleschool-container .school-card {
   width: 100%;
   max-width: 500px;
-  margin: 0 auto;
+  padding: 30px;
+  margin: 100px auto;
   background-color: #ffffff;
   border: 1px solid  #efefef;
 }
 
 .singleschool-container .school-card h1 {
   font-size: 18px;
+  text-align: center;
+  margin-top: 35px;
 }
 
 .button-singleschool {
   display: flex;
   justify-content: space-around;
   align-items: center;
+
 }
 
 .button-singleschool button {
   margin-top: 10px;
   width: 100px;
   background: #FF7A59;
-  padding: 7px 30px;
+  padding: 7px 20px;
   border: 1px solid #FF7A59;
   color: white;
   font-size: 16px;
@@ -610,3 +615,69 @@ form .cvv {
   cursor: pointer;
   
 }
+
+
+/* update */
+
+.update-form {
+  padding-top: 100px;
+}
+
+.update-form form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+  padding: 30px;
+  margin: 100px auto;
+  background-color: #ffffff;
+  border: 1px solid  #efefef;
+}
+
+.update-form form input {
+  border: 1px solid  #efefef;
+  background-color: #fafafa;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 16px;
+  margin: 10px;
+}
+
+
+.update-form form span {
+  margin: 0 0 10px auto;
+  width: 100px;
+  background: #FF7A59;
+  padding: 7px 10px;
+  border: 1px solid #FF7A59;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+.update-form form button {
+  margin-top: 10px;
+  width: 100%;
+  background: #FF7A59;
+  padding: 5px 10px;
+  border: 2px solid #FF7A59;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  
+}
+
+
+.update-form form button:hover {
+  background: #ff9980;
+  color: #ffffff;
+  border: 2px solid #ff9980;
+
+}
+
+

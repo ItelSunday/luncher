@@ -35,7 +35,8 @@ class School extends React.Component {
               <Link to={`/update/${school.id}`} key={school.id}><button>Edit</button></Link>
             </div>          
             <h1>School: {school.schoolName}</h1>
-            <p>Need Amount: {school.needAmount}</p>
+            <hr />
+            <p>Need Amount: ${school.needAmount}</p>
             <p>Details: {school.details}</p>
           </div>
         </div>

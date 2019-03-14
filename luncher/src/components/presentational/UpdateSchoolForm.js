@@ -28,8 +28,11 @@ class UpdateSchoolForm extends React.Component {
     const { id } = this.props.singleSchool[0];
     console.log("ID", id);
     return (
+      <div className="update-form">
+
       <form>
-        <Icon.X onClick={() => this.props.history.push("/login")} />
+        <h3><i className="fas fa-edit" /> Edit School info</h3>
+        <span onClick={() => this.props.history.push("/login")} ><i className="fas fa-ban" /> Cancel </span>
         <input
           type="text"
           value={schoolName}
@@ -53,6 +56,7 @@ class UpdateSchoolForm extends React.Component {
         />
         <button onClick={e => this.updateSchool(e, id)}>Save Changes</button>
       </form>
+      </div>
     );
   }
 }
