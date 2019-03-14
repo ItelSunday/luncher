@@ -1,10 +1,21 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import * as Icon from 'react-feather';
-
+import { Link } from 'react-router-dom';
 import { getSchools, deleteSchool } from '../../actions';
 
 class SchoolList extends React.Component {
+    state = {
+        school: {
+        schoolName: '',
+        needAmount: '',
+        details: ''
+        }
+    }
+
+    handleClick = id => {
+        this.props.getSingleSchool(id)
+    }
 
     componentWillMount() {
         this.props.getSchools();
@@ -14,10 +25,12 @@ class SchoolList extends React.Component {
         return (
             <div>
                 {this.props.schools.map(school => (
-                    <div className="adminSchoolList" key={school.id}>
+                    <Link to="/update" className="adminSchoolList" key={school.id}>
                         <h4>{school.schoolName}</h4>
+                        <p>${school.needAmount}</p>
+                        <p>{school.details}</p>
                         <Icon.Trash2 onClick={() => this.props.deleteSchool(school.id)} />
-                    </div>
+                    </Link>
                 ))}
             </div>
         )
@@ -30,7 +43,7 @@ const mapStateToProps = state => {
         schools: state.adminReducer.schools,
         getSchools: state.adminReducer.getSchools,
         error: state.adminReducer.error,
-        deleteSchool: state.adminReducer.deleteSchool
+        deleteSchool: state.adminReducer.deleteSchool,
     }
 }
 
