@@ -8,7 +8,15 @@ class School extends React.Component {
   componentWillMount() {
     console.log("params ID", this.props.match.params.id);
     this.props.getSingleSchool(this.props.match.params.id);
+    
   }
+
+  deleteSchool = (e, id) => {
+    e.preventDefault();
+    this.props.deleteSchool(id)
+    this.props.history.push("/login");
+  };
+
 
   render() {
     const school = this.props.singleSchool[0];
@@ -18,12 +26,19 @@ class School extends React.Component {
     }
     if (school) {
       return (
-        <div className="school-card">
-          <h4>School: {school.schoolName}</h4>
-          <p>Need Amount: ${school.needAmount}</p>
-          <p>Details: {school.details}</p>
-          <button onClick={(id) => this.props.deleteSchool(id)}>Delete</button>
-          <Link to={`/update/${school.id}`} key={school.id}><button>Edit</button></Link>
+        <div className="singleschool-container">
+          <div className="school-card">
+            <div className="button-singleschool">
+              <button onClick={(e) =>this.deleteSchool(e, school.id)}>
+                Delete
+              </button>
+              <Link to={`/update/${school.id}`} key={school.id}><button>Edit</button></Link>
+            </div>          
+            <h1>School: {school.schoolName}</h1>
+            <hr />
+            <p>Need Amount: ${school.needAmount}</p>
+            <p>Details: {school.details}</p>
+          </div>
         </div>
       );
     } else {

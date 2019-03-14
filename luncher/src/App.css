@@ -1,5 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
 .App {
-  text-align: center;
+  width: 100%;
+  background-color: #fafafa; 
 }
 
 .navBar {
@@ -8,17 +26,658 @@
   justify-content: space-between;
 }
 
+header {
+  background: #4DB3AF;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+  box-shadow: 1px 1px 1px 2px #9c9c9c;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 45%;
+  margin-right: 5%;
+}
+
+header a {
+  text-decoration: none;
+      color: white;
+      font-size: 20px;
+}
+
+header .bnt-donate button {
+  
+  background: #FF7A59;
+  padding: 7px 30px;
+  border: 2px solid #FF7A59;
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 5px;
+}
+
+header .bnt-donate button:hover {
+  background: #ff9980;
+  color: #ffffff;
+  border: 2px solid #ff9980;
+}
+
+header .fa-arrow-circle-right {
+  margin-left: 5px;
+  
+}
+
+footer {
+  box-sizing: border-box;
+  background-color: #4DB3AF;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px;
+}
+
+footer .bnt-donate button {
+  
+  background: #FF7A59;
+  padding: 7px 30px;
+  border: 2px solid #FF7A59;
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 5px;
+}
+
+footer .bnt-donate button:hover {
+  background: #ff9980;
+  color: #ffffff;
+  border: 2px solid #ff9980;
+}
+
+footer .fa-arrow-circle-right {
+  margin-left: 5px;
+  
+}
+
+/* Shcool list page */
+
+.backg-public {
+  padding-top: 30px; 
+  /* background:linear-gradient(
+    rgba(234, 234, 234, 0.45), 
+    rgba(234, 234, 234, 0.45)
+  ), url("./assets/breakfast.jpg") no-repeat center;
+  background-size: cover;
+  background-attachment: fixed; */
+}
+
+.header-shcool-list {
+  min-height: 500px;
+  background:linear-gradient(
+    rgba(0, 0, 0, 0.4), 
+    rgba(0, 0, 0, 0.4)
+  ), url("./assets/background-berries.jpg") no-repeat bottom;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.header-shcool-list h1 {
+  max-width: 1000px;
+  color:#ffffff;
+  text-transform: uppercase;
+}
+
+
+.school-list {
+  padding: 50px 0;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+
+}
+
+.school-list .school-card {
+  text-align: left;
+  width: 250px;
+  min-height: 250px;
+  margin: 20px 5px;
+  padding: 0;
+  position: relative;
+  background-color: #ffffff;
+  border: 1px solid #efefef;
+  border-bottom: none;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 7px 6px -6px #777;
+	   -moz-box-shadow: 0 7px 6px -6px #777;
+          box-shadow: 0 7px 6px -6px #777;
+          
+}
+
+.school-list .school-card:hover {
+  -webkit-box-shadow: 0 10px 6px -6px #777;
+  -moz-box-shadow: 0 10px 6px -6px #777;
+       box-shadow: 0 10px 6px -6px #777;
+}
+
+.school-list .school-card h3 {
+  padding: 10px 5px;
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 18px;
+  min-height: 40px;
+}
+
+.school-list .school-card hr {
+  width: 60%;
+}
+
+.school-list .school-card p {
+  padding: 10px;
+  
+}
+
+.school-list .school-card .bnt-donate button {
+    border: none;
+    background-color: #ff7a59;
+    color: #ffffff;
+    padding: 7px 0;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 0 0 3px 3px;
+    position: absolute;
+    bottom: 0;
+}
+
+.thankyou {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.thank-box {
+  margin: 0 auto;
+  padding: 20px;
+  width: 450px;
+  background-color: #ffffff;
+  border: 1px solid #efefef;
+  border-radius: 5px;
+}
+
+/* Donate form */
+
+.backg-donate {
+  min-height: 100vh;
+
+}
+
+.header-donate {
+  min-height: 500px;
+  background:linear-gradient(
+    rgba(0, 0, 0, 0.4), 
+    rgba(0, 0, 0, 0.4)
+  ), url("./assets/babies.jpg") no-repeat bottom;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.header-donate h1 {
+  max-width: 1000px;
+  color:#ffffff;
+  text-transform: uppercase;
+}
+
+.donate-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.donate-container form {
+  text-align: center;
+  margin: 0 auto 100px;
+  width: 400px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 5px;
+  border: 1px solid #efefef;
+}
+
+.fa-hamburger {
+  font-size: 40px;
+  color: #FF7A59;
+  margin: 20px;
+}
+
+.donate-container form input, .donate-container form select {
+  border: 1px solid  #efefef;
+  background-color: #fafafa;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.don-exp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.donate-container form select {
+  margin: 5px;
+}
+
+.donate-container form .fab {
+  font-size: 30px;
+  margin: 5px;
+  color: #c1c1c1;
+}
+
+
+.don-amount {
+  width: 100%;
+  max-width: 200px;
+  margin: 10px auto;
+}
+
+.card-holder {
+  width: 65%;
+}
+
+form .cvv {
+  margin: 10px;
+  width: 20%;
+}
+
+.don-card input {
+  width: 95%;
+  margin: 10px auto;
+}
+
+.btn-form button {
+  margin-top: 20px;
+  background: #FF7A59;
+  padding: 7px 30px;
+  border: 2px solid #FF7A59;
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 0 0 5px 5px;
+}
+
+.btn-form button:hover {
+  background: #ff9980;
+  color: #ffffff;
+  border: 2px solid #ff9980;
+}
+
+
+
+/* Thank you page*/
+
+.thankyou {
+  background:linear-gradient(
+    rgba(0, 0, 0, 0.4), 
+    rgba(0, 0, 0, 0.4)
+  ), url("./assets/apple.jpg") no-repeat bottom;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.thankyou button {
+  margin-top: 50px;
+  background: #FF7A59;
+  padding: 7px 30px;
+  border: 2px solid #FF7A59;
+  color: white;
+  font-size: 2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.thank-box button:hover {
+  background: #ff9980;
+  color: #ffffff;
+  border: 2px solid #ff9980;
+  box-shadow: 1px 1px 1px 2px #9c9c9c;
+}
+
+
+/* Admin list */
+
 .adminSchoolList {
-  border: 1px solid black;
+  border: 1px solid #efefef;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  border-radius: 20px;
+  border-radius: 5px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 60%;
-  margin: 15px 30px;
+  width: 100%;
+  max-width: 800px;
+  margin: 15px auto;
   padding: 5px 20px;
   cursor: pointer;
+  color: black;
+  text-decoration: none;
 }
+
+.school-tab h4 {
+  min-width: 30%;
+}
+
+/* Admin page */
+
+
+.admin-nav {
+  padding: 20px;
+  padding-top: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-nav button {
+  background-color: #4DB3AF;
+  border: none;
+  padding: 5px 20px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.admin-nav button:hover {
+  background-color: #ff9980;
+}
+      
+.add-button {
+  background-color: #FF7A59;
+  border: none;
+  padding: 5px 20px;
+  cursor: pointer;
+  color: #fff;
+  text-decoration: none;
+  border: 2px solid #FF7A59;
+}
+
+.add-button:hover {
+  background: #ff9980;
+  color: #ffffff;
+  border: 2px solid #ff9980;
+
+}
+
+.school-tab {
+  margin-bottom: 100px;
+}
+
+/* Add School form */
+
+.add-school {
+  /* background:linear-gradient(
+    rgba(0, 0, 0, 0.4), 
+    rgba(0, 0, 0, 0.4)
+  ), url("./assets/apple.jpg") no-repeat bottom; */
+  /* background-size: cover; */
+  /* background-attachment: fixed; */
+  padding: 250px 10px;
+  min-height: 40vh;
+  background-color: #efefef;
+}
+
+
+.add-school form {
+    text-align: center;
+    margin: 0 auto 100px;
+    padding-top: 15px;
+    width: 400px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid #efefef;
+    position: relative;
+    min-height: 200px;
+}
+
+.school-name, .school-need, .school-details {
+  width: 90%;
+  margin: 5px 10px;
+}
+
+.school-name, .school-need input, .school-details {
+  border: 1px solid  #efefef;
+  background-color: #fafafa;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.add-school button {
+  margin-top: 50px;
+  background: #FF7A59;
+  padding: 7px 30px;
+  border: 1px solid #FF7A59;
+  color: white;
+  font-size: 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.add-school button:hover {
+  background: #ff9980;
+  color: #ffffff;
+  border: 2px solid #ff9980;
+  box-shadow: 1px 1px 1px 2px #9c9c9c;
+}
+
+
+/* update from style */
+
+.update-admin {
+  background:linear-gradient(
+    rgba(0, 0, 0, 0.4), 
+    rgba(0, 0, 0, 0.4)
+  ), url("./assets/apple.jpg") no-repeat bottom;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 250px 10px 10px;
+  min-height: 100vh;
+}
+
+.update-admin input {
+  border: 1px solid  #efefef;
+  background-color: #fafafa;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 16px;
+  margin: 5px;
+}
+
+.update-admin form {
+  text-align: center;
+  margin: 0 auto 100px;
+  padding-top: 15px;
+  width: 400px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 5px;
+  border: 1px solid #efefef;
+  position: relative;
+  min-height: 200px;
+}
+
+.update-admin button {
+  margin-top: 50px;
+  background: #FF7A59;
+  padding: 7px 30px;
+  border: 1px solid #FF7A59;
+  color: white;
+  font-size: 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.update-admin button:hover {
+  background: #ff9980;
+  color: #ffffff;
+  border: 2px solid #ff9980;
+  box-shadow: 1px 1px 1px 2px #9c9c9c;
+}
+
+
+/* Single school card */
+
+.singleschool-container {
+  padding-top: 100px;
+}
+
+.singleschool-container .school-card {
+  width: 100%;
+  max-width: 500px;
+  padding: 30px;
+  margin: 100px auto;
+  background-color: #ffffff;
+  border: 1px solid  #efefef;
+}
+
+.singleschool-container .school-card h1 {
+  font-size: 18px;
+  text-align: center;
+  margin-top: 35px;
+}
+
+.button-singleschool {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+.button-singleschool button {
+  margin-top: 10px;
+  width: 100px;
+  background: #FF7A59;
+  padding: 7px 20px;
+  border: 1px solid #FF7A59;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  
+}
+
+
+/* update */
+
+.update-form {
+  padding-top: 100px;
+}
+
+.update-form form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+  padding: 30px;
+  margin: 100px auto;
+  background-color: #ffffff;
+  border: 1px solid  #efefef;
+}
+
+.update-form form input {
+  border: 1px solid  #efefef;
+  background-color: #fafafa;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 16px;
+  margin: 10px;
+}
+
+
+.update-form form span {
+  margin: 0 0 10px auto;
+  width: 100px;
+  background: #FF7A59;
+  padding: 7px 10px;
+  border: 1px solid #FF7A59;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+.update-form form button {
+  margin-top: 10px;
+  width: 100%;
+  background: #FF7A59;
+  padding: 5px 10px;
+  border: 2px solid #FF7A59;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  
+}
+
+
+.update-form form button:hover {
+  background: #ff9980;
+  color: #ffffff;
+  border: 2px solid #ff9980;
+
+}
+
 
