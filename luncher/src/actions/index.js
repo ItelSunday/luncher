@@ -18,6 +18,9 @@ export const FETCH_SCHOOLS_FAILURE = 'FETCH_SCHOOLS_FAILURE';
 export const DELETE_SCHOOL_START = 'DELETE_SCHOOL_START';
 export const DELETE_SCHOOL_SUCCESS = 'DELETE_SCHOOL_SUCCESS';
 export const DELETE_SCHOOL_FAILURE = 'DELETE_SCHOOL_FAILURE';
+export const ADD_SCHOOL_START = 'ADD_SCHOOL_START';
+export const ADD_SCHOOL_SUCCESS = 'ADD_SCHOOL_SUCCESS';
+export const ADD_SCHOOL_FAILURE = 'ADD_SCHOOL_FAILURE';
 
 
 export const login = creds => dispatch => {
@@ -69,6 +72,19 @@ export const deleteSchool = id => {
     }
 }
 
+export const addSchool = (newSchool) => dispatch => {
+    dispatch({ type: ADD_SCHOOL_START });
+    axios
+        .post('https://luncher-server.herokuapp.com/api/admin', newSchool, {
+            headers: { Authorization: localStorage.getItem('token') }
+        })
+        .then(res => res.data)
+        .then(schools => {
+            dispatch({ type: ADD_SCHOOL_SUCCESS, payload: schools });
+        })
+        .catch(err =>
+            dispatch({ type: ADD_SCHOOL_FAILURE, payload: err }));
+}
 
 export const publicReducer = () => dispatch => {
     dispatch({type: FETCHING_SCHOOLS});
