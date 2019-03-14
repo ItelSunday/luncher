@@ -4,16 +4,13 @@ import { Link } from 'react-router-dom'
 const DonateForm = props => {
     return(
         <div className="backg-donate">
+            <div className="header-donate">
+                <h1>Your Donation Helps Feed Them</h1>
+            </div>
             <div className="donate-container">
                 <form>
                 <i className="fas fa-hamburger" />
-                    <input
-                        className="don-amount"
-                        type="number"
-                        placeholder="Donation Amount"
-                        min="2" max="7"
-                    />
-                
+                                   
                 <div className="don-block-one">
                 <input 
                     className="card-holder"
@@ -68,8 +65,16 @@ const DonateForm = props => {
                     <i className="fab fa-cc-discover"/>
 
                 </div>
-               
-                <Link to="/thank-you" className="btn-form" >{(<button>Donate Now</button>)}</Link>
+                <div>
+                         
+                <input
+                        className="don-amount"
+                        type="number"
+                        placeholder="Donation Amount"
+                        min="2" max="7"
+                    />
+                </div>
+                <Link to="/thank-you" className="btn-form" >{(<button><i className="fas fa-dollar-sign"></i> Donate Now</button>)}</Link>
                 
                 </form>
             </div>

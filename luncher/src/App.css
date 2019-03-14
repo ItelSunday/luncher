@@ -17,7 +17,6 @@ body {
 
 .App {
   width: 100%;
-  /* text-align: center; */
   background-color: #fafafa; 
 }
 
@@ -27,16 +26,120 @@ body {
   justify-content: space-between;
 }
 
+header {
+  background: #4DB3AF;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+  box-shadow: 1px 1px 1px 2px #9c9c9c;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 45%;
+  margin-right: 5%;
+}
+
+header a {
+  text-decoration: none;
+      color: white;
+      font-size: 20px;
+}
+
+header .bnt-donate button {
+  
+  background: #FF7A59;
+  padding: 7px 30px;
+  border: 2px solid #FF7A59;
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 5px;
+}
+
+header .bnt-donate button:hover {
+  background: #ff9980;
+  color: #ffffff;
+  border: 2px solid #ff9980;
+}
+
+header .fa-arrow-circle-right {
+  margin-left: 5px;
+  
+}
+
+footer {
+  box-sizing: border-box;
+  background-color: #4DB3AF;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px;
+}
+
+footer .bnt-donate button {
+  
+  background: #FF7A59;
+  padding: 7px 30px;
+  border: 2px solid #FF7A59;
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 5px;
+}
+
+footer .bnt-donate button:hover {
+  background: #ff9980;
+  color: #ffffff;
+  border: 2px solid #ff9980;
+}
+
+footer .fa-arrow-circle-right {
+  margin-left: 5px;
+  
+}
+
 /* Shcool list page */
 
 .backg-public {
   padding-top: 30px; 
-  background:linear-gradient(
+  /* background:linear-gradient(
     rgba(234, 234, 234, 0.45), 
     rgba(234, 234, 234, 0.45)
   ), url("./assets/breakfast.jpg") no-repeat center;
   background-size: cover;
+  background-attachment: fixed; */
+}
+
+.header-shcool-list {
+  min-height: 500px;
+  background:linear-gradient(
+    rgba(0, 0, 0, 0.4), 
+    rgba(0, 0, 0, 0.4)
+  ), url("./assets/background-berries.jpg") no-repeat bottom;
+  background-size: cover;
   background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.header-shcool-list h1 {
+  max-width: 1000px;
+  color:#ffffff;
+  text-transform: uppercase;
 }
 
 
@@ -61,6 +164,8 @@ body {
   padding: 0;
   position: relative;
   background-color: #ffffff;
+  border: 1px solid #efefef;
+  border-bottom: none;
   border-radius: 5px;
   -webkit-box-shadow: 0 7px 6px -6px #777;
 	   -moz-box-shadow: 0 7px 6px -6px #777;
@@ -127,7 +232,29 @@ body {
 /* Donate form */
 
 .backg-donate {
-  padding-top: 100px; 
+  min-height: 100vh;
+
+}
+
+.header-donate {
+  min-height: 500px;
+  background:linear-gradient(
+    rgba(0, 0, 0, 0.4), 
+    rgba(0, 0, 0, 0.4)
+  ), url("./assets/babies.jpg") no-repeat bottom;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.header-donate h1 {
+  max-width: 1000px;
+  color:#ffffff;
+  text-transform: uppercase;
 }
 
 .donate-container {
@@ -137,7 +264,6 @@ body {
 }
 
 .donate-container form {
-  
   text-align: center;
   margin: 0 auto;
   width: 400px;
@@ -145,6 +271,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  border-radius: 5px;
+  border: 1px solid #efefef;
 }
 
 .fa-hamburger {
@@ -174,6 +302,7 @@ body {
 .donate-container form .fab {
   font-size: 30px;
   margin: 5px;
+  color: #c1c1c1;
 }
 
 
@@ -207,18 +336,27 @@ form .cvv {
   text-decoration: none;
   cursor: pointer;
   width: 100%;
+  border-radius: 0 0 5px 5px;
 }
 
 .btn-form button:hover {
   background: #ff9980;
   color: #ffffff;
   border: 2px solid #ff9980;
-  box-shadow: 1px 1px 1px 2px #9c9c9c;
 }
 
 
 
 /* Thank you page*/
+
+.thankyou {
+  background:linear-gradient(
+    rgba(0, 0, 0, 0.4), 
+    rgba(0, 0, 0, 0.4)
+  ), url("./assets/apple.jpg") no-repeat bottom;
+  background-size: cover;
+  background-attachment: fixed;
+}
 
 .thankyou button {
   margin-top: 50px;

@@ -14,7 +14,9 @@ class PublicView extends Component {
     console.log("HERE", this.props);
     return (
       <div className="backg-public">
-        <h1 className="school-list-title">Helping Schools Feed Kids</h1>
+        <div className="header-shcool-list">
+        <h1>Helping Schools Feed Kids</h1>
+        </div>
       <div className="school-list">
 
         {this.props.isfetchingSchools ? (
