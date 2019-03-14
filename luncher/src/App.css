@@ -449,12 +449,6 @@ form .cvv {
 /* Add School form */
 
 .add-school {
-  /* background:linear-gradient(
-    rgba(0, 0, 0, 0.4), 
-    rgba(0, 0, 0, 0.4)
-  ), url("./assets/apple.jpg") no-repeat bottom; */
-  /* background-size: cover; */
-  /* background-attachment: fixed; */
   padding: 250px 10px;
   min-height: 40vh;
   background-color: #efefef;
