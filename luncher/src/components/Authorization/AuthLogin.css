@@ -2,7 +2,7 @@
 :root {
   --primary-color: #ff7a59;
   --dark-blue: #1f2a38;
-  --form-white: #eeeff0;
+  --form-white:#efefef;
 }
 
 html,
@@ -12,13 +12,6 @@ body,
   padding: 0;
   height: 100%;
   width: 100%;
-}
-
-.App {
-  height: 100%;
-  width: 100%;
-  font-family: 'Roboto', sans-serif;
-  text-align: center;
 }
 
 .login-form {
@@ -37,53 +30,77 @@ body,
   align-items: center;
 }
 
-form {
+.login-form form {
   display: flex;
   flex-flow: column nowrap;
-  width: 150px;
-  height: 250px;
-  padding: 36px;
-  background-color: var(--form-white);
+  width: 350px;
+  height: 300px;
+
+  
+  padding: 50px 35px;
+  background-color:#fafafa;
   border-radius: 6px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 1), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
-form > label {
+.login-form form > label {
   align-self: flex-start;
-  color: #495057;
   font-size: 12px;
   margin-bottom: -6px;
+  color: #495057;
 }
 
-form > input {
+.login-form form > input {
   font-size: 16px;
   margin: 20px 0;
   border: none;
   border-radius: 16px;
-  padding: 6px 10px;
-  color: var(--dark-blue);
+  padding: 3px 10px;
+  background-color:var(--form-white);
 }
 
-::placeholder {
-  color: #bdbdbd;
+.userlogo::placeholder {
   background-image: url('../../assets/user.png');
   background-repeat: no-repeat;
+  font-size: 17px;
   text-indent: 40px;
+  color: #bdbdbd;
 }
 
+.passlogo::placeholder {
+  background-image: url('../../assets/lock.png');
+  background-repeat: no-repeat;
+  font-size: 17px;
+  text-indent: 40px;
+  color: #bdbdbd;
+}
+.login-form
 input:focus,
+.login-form
 input:active {
   outline: none;
+
 }
 
-form > button {
+.login-form > form > button {
   border: none;
   margin: 4px 0;
   padding: 6px;
   border-radius: 18px;
+  font-size: 16px;
+  font-weight: bold;
   background-color: var(--primary-color);
   border: 1px solid #ff7a59;
   color: #ffff;
-  font-size: 16px;
-  font-weight: bold;
 }
+
+.luncherlogo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.luncherlogo h1{
+  margin: 0 0 0 10px ; 
+}
+
