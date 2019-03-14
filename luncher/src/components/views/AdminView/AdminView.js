@@ -19,7 +19,6 @@ const AdminView = props => {
         </header>
         <div>
           <SchoolList deleteSchool={props.deleteSchool} />
-          />
         </div>
       </div>
     );
@@ -29,7 +28,8 @@ const AdminView = props => {
 const mapStateToProps = state => {
   return {
     logout: state.loginReducer.logout,
-    deleteSchool: state.adminReducer.deleteSchool
+    deleteSchool: state.adminReducer.deleteSchool,
+    addingSchool: state.adminReducer.addSchool
   };
 };
 

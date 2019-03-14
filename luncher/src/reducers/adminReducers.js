@@ -1,5 +1,6 @@
 import { FETCH_SCHOOLS_START, FETCH_SCHOOLS_SUCCESS, FETCH_SCHOOLS_FAILURE } from "../actions";
 import { DELETE_SCHOOL_START, DELETE_SCHOOL_SUCCESS, DELETE_SCHOOL_FAILURE } from "../actions";
+import { ADD_SCHOOL_START, ADD_SCHOOL_SUCCESS, ADD_SCHOOL_FAILURE } from "../actions";
 
 const initialState = {
     schools: [],
@@ -8,6 +9,7 @@ const initialState = {
     //loggedIn: false,
     fetchingInfo: false,
     deletingSchool: false,
+    addingSchool: false,
     //adminInfo: {},
     error: ''
 }
@@ -51,6 +53,23 @@ export const adminReducer = (state = initialState, action) => {
                 deletingSchool: false,
                 error: action.payload
             }
+        case ADD_SCHOOL_START:
+            return {
+                ...state,
+                addingSchool: true,
+                error: ''
+            }
+        case ADD_SCHOOL_SUCCESS:
+            return {
+                ...state,
+                addingSchool: false,
+                error: ''
+            }
+        case ADD_SCHOOL_FAILURE:
+            return {
+                ...state,
+                error: action.payload
+            }    
         default:
             return state;
     }
