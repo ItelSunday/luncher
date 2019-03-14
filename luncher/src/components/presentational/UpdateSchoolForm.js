@@ -9,6 +9,7 @@ class UpdateSchoolForm extends React.Component {
 
     render() {
         return (
+            <div className="update-admin">
             <form>
                 <Icon.X onClick={() => this.props.history.push('/login')} />
                 <input type="text" value={this.schoolName} placeholder={this.schoolName} onChange={this.handleChange} />
@@ -16,6 +17,7 @@ class UpdateSchoolForm extends React.Component {
                 <input type="text" value={this.details} placeholder={this.details} onChange={this.handleChange} />
                 <button onClick={() => this.updateSchool(this.id)}>Save Changes</button>
             </form>
+            </div>
         )
     }
 }

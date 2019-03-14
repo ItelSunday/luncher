@@ -25,15 +25,19 @@ class AddSchoolForm extends React.Component {
 
     render() {
         return (
-            <form onSubmit={e => this.addSchool(e)}>
-                <input type="text" name="schoolName" value={this.state.schoolName} 
-                        placeholder="School Name" onChange={this.handleChange} />
-                <span>$</span><input type="number" min="0.01" step="0.01" name="needAmount" value={this.state.needAmount}
-                        placeholder="School Need Amount" onChange={this.handleChange} />
-                <input type="text" name="details" value={this.state.details}
-                        placeholder="School Details" onChange={this.handleChange} />
-                <button type="submit">Save School</button>
-            </form>
+            <div className="add-school">
+                <form onSubmit={e => this.addSchool(e)}>
+                    <input className="school-name" type="text" name="schoolName" value={this.state.schoolName} 
+                            placeholder="School Name" onChange={this.handleChange} />
+                            <div className="school-need">
+                            <i className="fas fa-dollar-sign" /> <input  type="number" min="0.01" step="0.01" name="needAmount" value={this.state.needAmount}
+                            placeholder="School Need Amount" onChange={this.handleChange} />
+                            </div>
+                    <input className="school-details" type="text" name="details" value={this.state.details}
+                            placeholder="School Details" onChange={this.handleChange} />
+                    <button type="submit">Save School</button>
+                </form>
+            </div>
         )
     }
 }

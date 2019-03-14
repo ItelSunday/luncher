@@ -12,11 +12,11 @@ const AdminView = props => {
   //render() {
     return (
       <div>
-        <header>
-          <button onClick={props.logout}>Logout</button>
+        <div className="admin-nav">
+          <Link to="/add-school-form" className="add-button">Add School</Link>
           <p>Welcome {props.username}</p>
-          <Link to="/add-school-form">Add School</Link>
-        </header>
+          <button onClick={props.logout}>Logout</button>
+        </div>
         <div>
           <SchoolList deleteSchool={props.deleteSchool} />
         </div>

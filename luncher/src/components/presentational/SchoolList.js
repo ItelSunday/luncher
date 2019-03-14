@@ -23,7 +23,7 @@ class SchoolList extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="school-tab">
                 {this.props.schools.map(school => (
                     <Link to="/update" className="adminSchoolList" key={school.id}>
                         <h4>{school.schoolName}</h4>

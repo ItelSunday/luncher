@@ -180,11 +180,12 @@ footer .fa-arrow-circle-right {
 }
 
 .school-list .school-card h3 {
-  padding: 5px;
+  padding: 10px 5px;
   margin: 0;
   text-align: center;
   text-transform: uppercase;
   font-size: 18px;
+  min-height: 40px;
 }
 
 .school-list .school-card hr {
@@ -265,7 +266,7 @@ footer .fa-arrow-circle-right {
 
 .donate-container form {
   text-align: center;
-  margin: 0 auto;
+  margin: 0 auto 100px;
   width: 400px;
   background-color: #ffffff;
   display: flex;
@@ -381,15 +382,192 @@ form .cvv {
 /* Admin list */
 
 .adminSchoolList {
-  border: 1px solid black;
+  border: 1px solid #efefef;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  border-radius: 20px;
+  border-radius: 5px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 60%;
-  margin: 15px 30px;
+  width: 100%;
+  max-width: 800px;
+  margin: 15px auto;
   padding: 5px 20px;
   cursor: pointer;
+  color: black;
+  text-decoration: none;
+}
+
+.school-tab h4 {
+  min-width: 30%;
+}
+
+/* Admin page */
+
+
+.admin-nav {
+  padding: 20px;
+  padding-top: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-nav button {
+  background-color: #4DB3AF;
+  border: none;
+  padding: 5px 20px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.admin-nav button:hover {
+  background-color: #ff9980;
+}
+      
+.add-button {
+  background-color: #FF7A59;
+  border: none;
+  padding: 5px 20px;
+  cursor: pointer;
+  color: #fff;
+  text-decoration: none;
+  border: 2px solid #FF7A59;
+}
+
+.add-button:hover {
+  background: #ff9980;
+  color: #ffffff;
+  border: 2px solid #ff9980;
+
+}
+
+.school-tab {
+  margin-bottom: 100px;
+}
+
+/* Add School form */
+
+.add-school {
+  background:linear-gradient(
+    rgba(0, 0, 0, 0.4), 
+    rgba(0, 0, 0, 0.4)
+  ), url("./assets/apple.jpg") no-repeat bottom;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 250px 10px;
+  min-height: 100vh;
+}
+
+
+.add-school form {
+    text-align: center;
+    margin: 0 auto 100px;
+    padding-top: 15px;
+    width: 400px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid #efefef;
+    position: relative;
+    min-height: 200px;
+}
+
+.school-name, .school-need, .school-details {
+  width: 90%;
+  margin: 5px 10px;
+}
+
+.school-name, .school-need input, .school-details {
+  border: 1px solid  #efefef;
+  background-color: #fafafa;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.add-school button {
+  margin-top: 50px;
+  background: #FF7A59;
+  padding: 7px 30px;
+  border: 1px solid #FF7A59;
+  color: white;
+  font-size: 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.add-school button:hover {
+  background: #ff9980;
+  color: #ffffff;
+  border: 2px solid #ff9980;
+  box-shadow: 1px 1px 1px 2px #9c9c9c;
+}
+
+
+/* update from style */
+
+.update-admin {
+  background:linear-gradient(
+    rgba(0, 0, 0, 0.4), 
+    rgba(0, 0, 0, 0.4)
+  ), url("./assets/apple.jpg") no-repeat bottom;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 250px 10px 10px;
+  min-height: 100vh;
+}
+
+.update-admin input {
+  border: 1px solid  #efefef;
+  background-color: #fafafa;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 16px;
+  margin: 5px;
+}
+
+.update-admin form {
+  text-align: center;
+  margin: 0 auto 100px;
+  padding-top: 15px;
+  width: 400px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 5px;
+  border: 1px solid #efefef;
+  position: relative;
+  min-height: 200px;
+}
+
+.update-admin button {
+  margin-top: 50px;
+  background: #FF7A59;
+  padding: 7px 30px;
+  border: 1px solid #FF7A59;
+  color: white;
+  font-size: 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.update-admin button:hover {
+  background: #ff9980;
+  color: #ffffff;
+  border: 2px solid #ff9980;
+  box-shadow: 1px 1px 1px 2px #9c9c9c;
 }
