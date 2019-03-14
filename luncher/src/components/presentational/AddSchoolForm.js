@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 
 import { addSchool } from '../../actions';
 
@@ -19,6 +20,7 @@ class AddSchoolForm extends React.Component {
         e.preventDefault();
         this.props.addSchool(this.state);
         this.setState({ schoolName: '', needAmount: '', details: '' });
+        this.props.history.push('/login');
     }
 
     render() {
@@ -38,4 +40,4 @@ class AddSchoolForm extends React.Component {
 
 const mapStateToProps = () => ({});
 
-export default connect (mapStateToProps, { addSchool })(AddSchoolForm)
+export default withRouter(connect(mapStateToProps, { addSchool })(AddSchoolForm))

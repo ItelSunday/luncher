@@ -1,19 +1,24 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
 
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+
 body {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
 }
 
 .App {
-  text-align: center;
-  background:linear-gradient(
-    rgba(234, 234, 234, 0.45), 
-    rgba(234, 234, 234, 0.45)
-  ), url("./assets/breakfast.jpg") no-repeat center;
-  background-size: cover;
+  width: 100%;
+  /* text-align: center; */
   background-color: #fafafa; 
-  background-attachment: fixed;
 }
 
 .navBar {
@@ -21,6 +26,19 @@ body {
   flex-direction: row;
   justify-content: space-between;
 }
+
+/* Shcool list page */
+
+.backg-public {
+  padding-top: 30px; 
+  background:linear-gradient(
+    rgba(234, 234, 234, 0.45), 
+    rgba(234, 234, 234, 0.45)
+  ), url("./assets/breakfast.jpg") no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 
 .school-list {
   padding: 50px 0;
@@ -32,13 +50,16 @@ body {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: flex-start;
+
 }
 
 .school-list .school-card {
   text-align: left;
-  min-width: 250px;
+  width: 250px;
+  min-height: 250px;
   margin: 20px 5px;
   padding: 0;
+  position: relative;
   background-color: #ffffff;
   border-radius: 5px;
   -webkit-box-shadow: 0 7px 6px -6px #777;
@@ -81,4 +102,156 @@ body {
     font-size: 16px;
     cursor: pointer;
     border-radius: 0 0 3px 3px;
+    position: absolute;
+    bottom: 0;
+}
+
+.thankyou {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.thank-box {
+  margin: 0 auto;
+  padding: 20px;
+  width: 450px;
+  background-color: #ffffff;
+  border: 1px solid #efefef;
+  border-radius: 5px;
+}
+
+/* Donate form */
+
+.backg-donate {
+  padding-top: 100px; 
+}
+
+.donate-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.donate-container form {
+  
+  text-align: center;
+  margin: 0 auto;
+  width: 400px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.fa-hamburger {
+  font-size: 40px;
+  color: #FF7A59;
+  margin: 20px;
+}
+
+.donate-container form input, .donate-container form select {
+  border: 1px solid  #efefef;
+  background-color: #fafafa;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.don-exp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.donate-container form select {
+  margin: 5px;
+}
+
+.donate-container form .fab {
+  font-size: 30px;
+  margin: 5px;
+}
+
+
+.don-amount {
+  width: 100%;
+  max-width: 200px;
+  margin: 10px auto;
+}
+
+.card-holder {
+  width: 65%;
+}
+
+form .cvv {
+  margin: 10px;
+  width: 20%;
+}
+
+.don-card input {
+  width: 95%;
+  margin: 10px auto;
+}
+
+.btn-form button {
+  margin-top: 20px;
+  background: #FF7A59;
+  padding: 7px 30px;
+  border: 2px solid #FF7A59;
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.btn-form button:hover {
+  background: #ff9980;
+  color: #ffffff;
+  border: 2px solid #ff9980;
+  box-shadow: 1px 1px 1px 2px #9c9c9c;
+}
+
+
+
+/* Thank you page*/
+
+.thankyou button {
+  margin-top: 50px;
+  background: #FF7A59;
+  padding: 7px 30px;
+  border: 2px solid #FF7A59;
+  color: white;
+  font-size: 2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.thank-box button:hover {
+  background: #ff9980;
+  color: #ffffff;
+  border: 2px solid #ff9980;
+  box-shadow: 1px 1px 1px 2px #9c9c9c;
+}
+
+
+/* Admin list */
+
+.adminSchoolList {
+  border: 1px solid black;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+  margin: 15px 30px;
+  padding: 5px 20px;
+  cursor: pointer;
 }

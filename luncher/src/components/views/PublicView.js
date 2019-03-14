@@ -13,7 +13,7 @@ class PublicView extends Component {
   render() {
     console.log("HERE", this.props);
     return (
-      <>
+      <div className="backg-public">
         <h1 className="school-list-title">Helping Schools Feed Kids</h1>
       <div className="school-list">
 
@@ -31,7 +31,7 @@ class PublicView extends Component {
           </>
         )}
       </div>
-      </>
+      </div>
     );
   }
 }
