@@ -2,11 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
-<<<<<<< HEAD
-import { BrowserRouter as Router } from 'react-router-dom';
-=======
 import { HashRouter } from 'react-router-dom';
->>>>>>> da97cb8d18ed5e0366798aebeacabfdaed7c0968
 import thunk from 'redux-thunk';
 import logger from 'redux-logger';
 
@@ -31,13 +27,6 @@ const persistor = persistStore(store);
 
 const rootElement = document.getElementById('root');
 ReactDOM.render(
-<<<<<<< HEAD
-    <Provider store={store}>
-      <Router>
-        <App />
-      </Router>
-    </Provider>,
-=======
   <Provider store={store}>
   <PersistGate loading={null} persistor={persistor}>
     <HashRouter>
@@ -45,6 +34,5 @@ ReactDOM.render(
     </HashRouter>
   </PersistGate>
 </Provider>,
->>>>>>> da97cb8d18ed5e0366798aebeacabfdaed7c0968
 rootElement
 );

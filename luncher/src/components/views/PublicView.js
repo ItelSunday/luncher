@@ -1,10 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { publicReducer } from "../../actions";
-<<<<<<< HEAD
-=======
 import SchoolCard from './SchoolCard';
->>>>>>> da97cb8d18ed5e0366798aebeacabfdaed7c0968
 import uuidv4 from "uuid";
 
 class PublicView extends Component {

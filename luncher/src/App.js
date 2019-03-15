@@ -1,13 +1,4 @@
 import React, { Component } from 'react';
-<<<<<<< HEAD
-import { Route } from 'react-router-dom';
-import './App.css';
-import { HomeView } from './components/views/HomeView';
-import PublicView from './components/views/PublicView';
-
-
-
-=======
 import { Route, Switch, Link } from 'react-router-dom';
 import './App.css';
 import { HomeView } from './components/views/HomeView';
@@ -19,15 +10,10 @@ import ThankYou from './components/views/ThankYou';
 import UpdateSchoolForm from './components/presentational/UpdateSchoolForm';
 
 
->>>>>>> da97cb8d18ed5e0366798aebeacabfdaed7c0968
 class App extends Component {
   render() {
     return (
         <div className="App">
-<<<<<<< HEAD
-           <Route exact path="/" component={PublicView} />
-           <Route exact  path="/home" component={HomeView} />
-=======
           <header>
             <a href="index.html" className="head-luncher">Luncher</a>
             <nav>
@@ -50,7 +36,6 @@ class App extends Component {
           <Link to="/login" className="bnt-donate" >{(<button><i className="fas fa-key"></i> Admin Login</button>)}</Link>
             <p>Copyright 2019 - Luncher</p>
         </footer>
->>>>>>> da97cb8d18ed5e0366798aebeacabfdaed7c0968
         </div>
     );
   }

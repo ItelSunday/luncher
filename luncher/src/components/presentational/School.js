@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { connect } from 'react-redux';
-
-const School = props => {
-    const { school } = props
-    return (
-        <div key={school.id} className="school-card">
-            <h4>{school.schoolName}</h4>
-            <p>{school.details}</p>
-            <p>{school.needAmount}</p>
-        </div>
-    )
-}
-
-const mapStateToProps = () => ({})
-export default connect(mapStateToProps, {})(School)
-=======
 import React from "react";
 import { connect } from "react-redux";
 import { getSingleSchool, deleteSchool } from "../../actions";
@@ -77,4 +59,3 @@ export default connect(
   mapStateToProps,
   { getSingleSchool, deleteSchool }
 )(School);
->>>>>>> da97cb8d18ed5e0366798aebeacabfdaed7c0968

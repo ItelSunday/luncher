@@ -212,14 +212,6 @@ footer .fa-arrow-circle-right {
     bottom: 0;
 }
 
-<<<<<<< HEAD
-.navBar {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-=======
 .thankyou {
     height: 100vh;
     width: 100%;
@@ -689,4 +681,3 @@ form .cvv {
 }
 
 
->>>>>>> da97cb8d18ed5e0366798aebeacabfdaed7c0968
