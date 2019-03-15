@@ -51,7 +51,7 @@ class LoginForm extends React.Component {
             placeholder="Password"
           />
           <button type="submit">Sign In</button>
-        <Link to="/register" className="bnt-register" ><i className="fas fa-graduation-cap"></i> Sing Up</Link>
+        <Link to="/register" className="bnt-register" ><i className="fas fa-graduation-cap"></i> sing up</Link>
         </form>
       </div>
     );
