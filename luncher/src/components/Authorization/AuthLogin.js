@@ -30,8 +30,9 @@ class LoginForm extends React.Component {
       <div className="login-form">
         <form onSubmit={e => this.handleLogin(e)}>
         <div className="luncherlogo">
-          <img src={luncherLogo} width="120" height="109" alt="" />
+          <img className="logo-expand" src={luncherLogo} width="120" height="109" alt="" />
         </div> 
+        <h1> Admin Log in </h1>
           <input
             className="userlogo"
             required
@@ -53,7 +54,7 @@ class LoginForm extends React.Component {
           />
           <button className="cta" type="submit">Log In</button>
         <Link to="/register" className="bnt-register" >
-        <i className="cta fas fa-graduation-cap"></i> SIGN UP</Link>
+        <i className="cta fas fa-graduation-cap"></i> Sign Up</Link>
         </form>
       </div>
     );

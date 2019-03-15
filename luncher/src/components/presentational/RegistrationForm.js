@@ -39,10 +39,10 @@ class RegistrationForm extends React.Component {
       <div className="login-form">
         <form onSubmit={e => this.handleSubmit(e)}>
      
-          <img src={luncherLogo} width="120" height="109" alt="" />
+          <img className="logo-animate" src={luncherLogo} width="120" height="109" alt="" />
 
         <h1> Admin Sign up </h1>
-           <label htmlFor="username"></label>
+        <label htmlFor="username"></label>
           <input className="userlogo"
             required
             type="text"
@@ -60,7 +60,7 @@ class RegistrationForm extends React.Component {
             onChange={this.handleChange}
             placeholder="Password"
           />
-          <button type="submit">Register</button>
+          <button className="cta" type="submit">Register</button>
         </form>
         {fireRedirect && (
           <Redirect to={from || '/login'}/>
