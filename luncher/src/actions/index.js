@@ -1,5 +1,13 @@
 import axios from 'axios';
 
+//Register
+export const REGISTER_START = 'REGISTER_START';
+export const REGISTER_SUCCESS = 'REGISTER_SUCCESS';
+export const REGISTER_FAILURE = 'REGISTER_FAILURE';
+
+export const REGISTER = 'REGISTER';
+
+//Login
 export const LOGIN_START = 'LOGIN_START';
 export const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
 export const LOGIN_FAILURE = 'LOGIN_FAILURE';
@@ -22,6 +30,22 @@ export const ADD_SCHOOL_START = 'ADD_SCHOOL_START';
 export const ADD_SCHOOL_SUCCESS = 'ADD_SCHOOL_SUCCESS';
 export const ADD_SCHOOL_FAILURE = 'ADD_SCHOOL_FAILURE';
 
+export const register = creds => dispatch => {
+    dispatch({ type: REGISTER_START });
+    axios
+        .post('https://luncher-server.herokuapp.com/api/auth/register', creds)
+        .then(res => {
+            console.log('register',res)
+            // localStorage.setItem('token',res.data.token)
+            // dispatch({ type: REGISTER_SUCCESS, payload: res.data });
+        })
+        .catch(err => dispatch({ type: REGISTER_FAILURE, payload: err.response.data.message }))
+  };
+
+
+// export const registerin = () => {
+//     return { type: REGISTER };
+//   };
 
 export const login = creds => dispatch => {
     dispatch({ type: LOGIN_START });
@@ -58,7 +82,7 @@ export const getSchools = id => dispatch => {
 export const deleteSchool = id => {
     const deletedSchool = axios
         .delete(`https://luncher-server.herokuapp.com/api/admin/${id}`, {
-            headers: { Authorization: localStorage.getItem('token') } 
+            headers: { Authorization: localStorage.postItem('token') } 
         });
     return dispatch => {
         dispatch({ type: DELETE_SCHOOL_START });

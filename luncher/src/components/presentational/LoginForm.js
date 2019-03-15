@@ -50,7 +50,8 @@ class LoginForm extends React.Component {
             onChange={this.handleChange}
             placeholder="Password"
           />
-          <button type="submit">Sign In</button>
+          <button type="submit">Log In</button>
+          <button type="submit">Create an account</button>
         </form>
       </div>
     );

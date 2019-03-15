@@ -2,6 +2,7 @@ import React from 'react';
 import { LoginView } from '../views/LoginView/index';
 import { connect } from 'react-redux';
 import { AdminView } from '../views/AdminView/index';
+// import { RegistrationForm } from '../presentational/RegistrationForm';
 
 
 const authenticate = AdminView => LoginView =>
@@ -11,7 +12,12 @@ const authenticate = AdminView => LoginView =>
                 <AdminView match={this.props.match} history={this.props.history} />
             ) : (
                 <LoginView match={this.props.match} history={this.props.history} />
+            )  (    
+                // <RegistrationForm match={this.props.match} history={this.props.history} />
+                // )  (    
+                       
             );
+            
         }
     }
 
@@ -19,4 +25,4 @@ const authenticate = AdminView => LoginView =>
         loggedIn: state.loginReducer.loggedIn
     });
 
-export default connect(mapStateToProps)(authenticate(AdminView)(LoginView));
+export default connect(mapStateToProps)(authenticate(AdminView)(LoginView);
