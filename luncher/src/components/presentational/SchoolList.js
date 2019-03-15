@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { getSchools, deleteSchool } from '../../actions';
+import { getSchools, deleteSchool, getSingleSchool } from '../../actions';
 
 class SchoolList extends React.Component {
     state = {
@@ -45,4 +45,7 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, {getSchools, deleteSchool })(SchoolList)
+export default connect(
+  mapStateToProps,
+  { getSchools, deleteSchool, getSingleSchool }
+)(SchoolList);

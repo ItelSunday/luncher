@@ -1,10 +1,28 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url("https://fonts.googleapis.com/css?family=Roboto");
 :root {
   --primary-color: #ff7a59;
   --dark-blue: #1f2a38;
   --form-white: #eeeff0;
 }
 
+<<<<<<< HEAD
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.App {
+  height: 100%;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+}
+=======
+>>>>>>> da97cb8d18ed5e0366798aebeacabfdaed7c0968
 
 .login-form {
   width: 100%;
@@ -13,7 +31,7 @@
     rgba(0, 0, 0, 0.4), 
     rgba(0, 0, 0, 0.4)
     ),
-    url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=709&amp;q=80')
+    url("https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=709&amp;q=80")
       no-repeat fixed center;
 
   background-size: cover;
@@ -55,7 +73,7 @@
 
 .login-form .userlogo::placeholder {
   color: #bdbdbd;
-  background-image: url('../../assets/user.png');
+  background-image: url("../../assets/user.png");
   background-repeat: no-repeat;
   text-indent: 40px;
 }
