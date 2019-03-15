@@ -8,7 +8,7 @@ import AddSchoolForm from './components/presentational/AddSchoolForm';
 import School from "./components/presentational/School";
 import ThankYou from './components/views/ThankYou';
 import UpdateSchoolForm from './components/presentational/UpdateSchoolForm';
-
+import {Register} from './components/views/RegisterView';
 
 class App extends Component {
   render() {
@@ -26,6 +26,7 @@ class App extends Component {
           <Switch>
            <Route exact path="/" component={PublicView} />
            <Route exact  path="/login" component={HomeView} />
+           <Route path="/register" component={Register} />
            <Route path="/add-school-form" component={AddSchoolForm} />
            <Route path="/school/:id" component={School} />
            <Route exact path="/donate-form" component={DonateForm} />

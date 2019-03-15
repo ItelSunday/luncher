@@ -1,5 +1,16 @@
 import axios from "axios";
 
+
+// Registration
+export const REGISTER_START = 'REGISTER_START';
+export const REGISTER_SUCCESS = 'REGISTER_SUCCESS';
+export const REGISTER_FAILURE = 'REGISTER_FAILURE';
+
+export const REGISTER = 'REGISTER';
+
+
+// Login
+
 export const LOGIN_START = "LOGIN_START";
 export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
 export const LOGIN_FAILURE = "LOGIN_FAILURE";
@@ -31,6 +42,22 @@ export const ADD_SCHOOL_FAILURE = "ADD_SCHOOL_FAILURE";
 export const UPDATE_SCHOOL_START = "UPDATE_SCHOOL_START";
 export const UPDATE_SCHOOL_SUCCESS = "UPDATE_SCHOOL_SUCCESS";
 export const UPDATE_SCHOOL_FAILURE = "UPDATE_SCHOOL_FAILURE";
+
+
+export const register = creds => dispatch => {
+  dispatch({ type: REGISTER_START });
+  axios
+      .post('https://luncher-server.herokuapp.com/api/auth/register', creds)
+      .then(res => {
+          console.log('register',res)
+      })
+      .catch(err => dispatch({ type: REGISTER_FAILURE, payload: err.response.data.message }))
+};
+
+
+
+
+
 
 export const login = creds => dispatch => {
   dispatch({ type: LOGIN_START });

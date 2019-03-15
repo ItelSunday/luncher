@@ -1,8 +1,8 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 :root {
   --primary-color: #ff7a59;
   --dark-blue: #1f2a38;
-  --form-white: #eeeff0;
+  --form-white:#efefef;
 }
 
 
@@ -10,38 +10,50 @@
   width: 100%;
   height: 100vh;
   background: linear-gradient(
-    rgba(0, 0, 0, 0.4), 
-    rgba(0, 0, 0, 0.4)
+      120deg,
+      rgba(217, 253, 252, 0.6),
+      rgba(217, 253, 252, 0.6)
     ),
-    url("https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=709&amp;q=80")
+    url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=709&amp;q=80')
       no-repeat fixed center;
-
   background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+@media (min-width: 300px) and (max-width: 500px){
+  .login-form {
+    padding-top: 50px; 
+  }
+}
+
+@media (min-width: 501px) and (max-width: 800px){
+  .login-form {
+    padding: 120px 0 0 0; 
+  }
+}
 
 .login-form form {
   display: flex;
   flex-flow: column nowrap;
-  width: 150px;
-  padding: 36px;
-  background-color: var(--form-white);
+  width: 290px;
+  height: 499px;
+  margin-top: 50px;
+  padding: 50px 35px;
+  background-color:#fafafa;
   border-radius: 6px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 1), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
-.login-form form img {
-  margin: 10px auto;
-
+.login-form form h1 {
+  text-align: center;
 }
 
 .login-form form > label {
   align-self: flex-start;
-  color: #495057;
   font-size: 12px;
   margin-bottom: -6px;
+  color: #495057;
 }
 
 .login-form form > input {
@@ -49,37 +61,73 @@
   margin: 20px 0;
   border: none;
   border-radius: 16px;
-  padding: 6px 10px;
-  color: var(--dark-blue);
+  padding: 20px;
+  background-color:var(--form-white);
+  /* box-shadow: rgba(131, 228, 167, 0.45) 0px 4px 30px 0px; */
 }
 
-.login-form .userlogo::placeholder {
+.userlogo::placeholder {
+  font-size: 17px;
   color: #bdbdbd;
-  background-image: url("../../assets/user.png");
-  background-repeat: no-repeat;
-  text-indent: 40px;
 }
-
-.login-form .passlogo::placeholder {
+.passlogo::placeholder {
+  font-size: 17px;
   color: #bdbdbd;
-  background-image: url('../../assets/lock.png');
-  background-repeat: no-repeat;
-  text-indent: 40px;
 }
 
-
-.login-form input:focus,
-.login-form input:active {
+.login-form 
+input:focus, 
+.login-form
+input:active {
   outline: none;
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
 }
 
-.login-form form > button {
+input [type=text] {
+  transition: all 35s ease-in-out;
+}
+
+
+
+.login-form > form > button {
   border: none;
-  padding: 6px;
+  margin: 20px 0 0 0;
+  padding: 18px;
   border-radius: 18px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
   background-color: var(--primary-color);
   border: 1px solid #ff7a59;
   color: #ffff;
-  font-size: 16px;
-  font-weight: bold;
 }
+
+.login-form button:hover {
+  transition: all 0.4s ease 0s;
+  background: rgb(250, 97, 58);
+  box-shadow: rgba(255, 122, 89, 0.518) 0px 10px 30px 0px;
+  border-radius: 25px;
+}
+
+.luncherlogo{
+  text-align: center;
+  margin: 0 auto;
+  border: 6px solid #ff7a59;
+  border-radius: 50%;
+	width: 200px;
+  height: 400px;
+  justify-content: center;
+  align-items: center;
+}
+
+.luncherlogo img{
+  margin: 0 auto;
+  padding: 20px 0 0 0;
+}
+
+.login-form h1{
+  margin: 10px 0 0 0 10px;
+  color: #495057;  
+}
+
+
