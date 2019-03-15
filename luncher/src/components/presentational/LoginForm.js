@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 
+import { Link } from 'react-router-dom';
 import "../Authorization/AuthLogin.css";
 import luncherLogo from "../../assets/luncherLogo.png";
 import { login } from "../../actions";
@@ -28,8 +29,8 @@ class LoginForm extends React.Component {
     return (
       <div className="login-form">
         <form onSubmit={e => this.handleLogin(e)}>
-          <img src={luncherLogo} width="60" height="60" alt="" />
-          <label htmlFor="username">Username</label>
+          <img src={luncherLogo} width="120" height="109" alt="" />
+          
           <input
             className="userlogo"
             required
@@ -39,7 +40,7 @@ class LoginForm extends React.Component {
             onChange={this.handleChange}
             placeholder="Username"
           />
-          <label htmlFor="password">Password</label>
+          
           <input
             className="passlogo"
             required
@@ -50,6 +51,7 @@ class LoginForm extends React.Component {
             placeholder="Password"
           />
           <button type="submit">Sign In</button>
+        <Link to="/register" className="bnt-register" ><i className="fas fa-graduation-cap"></i> Sing Up</Link>
         </form>
       </div>
     );

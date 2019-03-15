@@ -692,3 +692,17 @@ form .cvv {
 }
 
 
+/* Login link and registration form */
+
+.bnt-register {
+  text-decoration: none;
+  text-align: center;
+  margin-top: 20px;
+  color: #000000;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.bnt-register:hover {
+  color: #4DB3AF;
+}
