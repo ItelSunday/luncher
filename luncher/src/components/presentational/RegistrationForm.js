@@ -8,6 +8,7 @@ import { register } from "../../actions";
 
 class RegistrationForm extends React.Component {
   state = {
+    // Additional Feature
     // firstname: "",
     // lastname: "",
     fireRedirect: false,
