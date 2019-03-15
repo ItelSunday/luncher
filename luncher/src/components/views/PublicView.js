@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { publicReducer } from "../../actions";
+<<<<<<< HEAD
+=======
+import SchoolCard from './SchoolCard';
+>>>>>>> da97cb8d18ed5e0366798aebeacabfdaed7c0968
 import uuidv4 from "uuid";
 
 class PublicView extends Component {
@@ -12,23 +16,26 @@ class PublicView extends Component {
   render() {
     console.log("HERE", this.props);
     return (
+      <div className="backg-public">
+        <div className="header-shcool-list">
+        <h1>Helping Schools Feed Kids</h1>
+        </div>
       <div className="school-list">
 
         {this.props.isfetchingSchools ? (
           <h1>Loading...</h1>
         ) : (
-          <div>
+          <>
             {this.props.schools.map(school => { 
               return (
-                  <>
-                  <div><strong>School Name: </strong>{school.schoolName}</div>
-                  <div><strong>School descripton: </strong>{school.details}</div>
-                  <div><strong>Amount needed: </strong>{school.needAmount}</div>
-                  </>
+                  <div className="school-card" key={uuidv4()}> 
+                    <SchoolCard school={school}/>
+                  </div>
               );
             })}
-          </div>
+          </>
         )}
+      </div>
       </div>
     );
   }
