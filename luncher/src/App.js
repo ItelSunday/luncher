@@ -14,6 +14,7 @@ class App extends Component {
   render() {
     return (
         <div className="App">
+          <div className="wrap">
           <header>
             <a href="index.html" className="head-luncher">Luncher</a>
             <nav>
@@ -33,6 +34,7 @@ class App extends Component {
            <Route exact path="/thank-you" component={ThankYou} />
            <Route path="/update/:id" component={UpdateSchoolForm} />
           </Switch>
+          </div>
           <footer>
           <Link to="/login" className="bnt-donate" >{(<button><i className="fas fa-key"></i> Admin Login</button>)}</Link>
             <p>Copyright 2019 - Luncher</p>
