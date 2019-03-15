@@ -26,7 +26,7 @@ class AddSchoolForm extends React.Component {
     render() {
         return (
             <div className="add-school">
-                <form onSubmit={e => this.addSchool(e)}>
+                <form onSubmit={this.addSchool}>
                 <span onClick={() => this.props.history.push("/login")} ><i className="fas fa-ban" /> Cancel </span>
                     <input className="school-name" type="text" name="schoolName" value={this.state.schoolName} 
                             placeholder="School Name" onChange={this.handleChange} />
