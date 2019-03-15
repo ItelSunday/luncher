@@ -609,13 +609,13 @@ form .cvv {
 .button-singleschool {
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-start;
 
 }
 
 .button-singleschool button {
   margin-top: 10px;
-  width: 100px;
+  width: 115px;
   background: #FF7A59;
   padding: 7px 20px;
   border: 1px solid #FF7A59;

@@ -30,9 +30,10 @@ class School extends React.Component {
           <div className="school-card">
             <div className="button-singleschool">
               <button onClick={(e) =>this.deleteSchool(e, school.id)}>
-                Delete
+              <i className="fas fa-trash-alt"/> Delete
               </button>
-              <Link to={`/update/${school.id}`} key={school.id}><button>Edit</button></Link>
+              <Link to={`/update/${school.id}`} key={school.id}><button><i className="fas fa-edit" />Edit</button></Link>
+              <Link to="/login" key={school.id}><button><i className="fas fa-ban" /> Cancel</button></Link>
             </div>          
             <h1>School: {school.schoolName}</h1>
             <hr />
