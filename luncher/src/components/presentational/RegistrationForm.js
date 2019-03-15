@@ -35,33 +35,6 @@ class RegistrationForm extends React.Component {
     const { from } = this.props.state || '/'
     const { fireRedirect } = this.state
     return (
-<<<<<<< HEAD
-      <div className="registration-form">
-        <form onSubmit={e => this.handleSubmit(e)}>
-        <div className="luncherlogo" >
-          <img src={luncherLogo} width="120" height="109" alt="" />
-        </div>
-        <h1> Admin Sign up </h1>
-        {/* <label htmlFor="firstname"></label>
-          <input className="firstname"
-            required
-            type="text"
-            name="firstname"
-            value={this.state.firstname}
-            onChange={this.handleChange}
-            placeholder="First Name"
-          />
-          <label htmlFor="lastname"></label>
-          <input className="lastname"
-            required
-            type="text"
-            name="lastname"
-            value={this.state.lastname}
-            onChange={this.handleChange}
-            placeholder="Last Name"
-          /> */}
-          <label htmlFor="username"></label>
-=======
       <div className="login-form">
         <form onSubmit={e => this.handleSubmit(e)}>
      
@@ -69,7 +42,6 @@ class RegistrationForm extends React.Component {
 
         <h1> Admin Sign up </h1>
            <label htmlFor="username"></label>
->>>>>>> 10f084b0cb38b937c15201c176b02ec292665d84
           <input className="userlogo"
             required
             type="text"

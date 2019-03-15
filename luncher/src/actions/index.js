@@ -1,30 +1,19 @@
 import axios from "axios";
 
-<<<<<<< HEAD
-//Register
-=======
 
 // Registration
->>>>>>> 10f084b0cb38b937c15201c176b02ec292665d84
 export const REGISTER_START = 'REGISTER_START';
 export const REGISTER_SUCCESS = 'REGISTER_SUCCESS';
 export const REGISTER_FAILURE = 'REGISTER_FAILURE';
 
 export const REGISTER = 'REGISTER';
 
-<<<<<<< HEAD
-//Login
-export const LOGIN_START = 'LOGIN_START';
-export const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
-export const LOGIN_FAILURE = 'LOGIN_FAILURE';
-=======
 
 // Login
 
 export const LOGIN_START = "LOGIN_START";
 export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
 export const LOGIN_FAILURE = "LOGIN_FAILURE";
->>>>>>> 10f084b0cb38b937c15201c176b02ec292665d84
 
 export const LOGOUT = "LOGOUT";
 
@@ -38,28 +27,9 @@ export const FETCH_SCHOOLS_START = "FETCH_SCHOOLS_START";
 export const FETCH_SCHOOLS_SUCCESS = "FETCH_SCHOOLS_SUCCESS";
 export const FETCH_SCHOOLS_FAILURE = "FETCH_SCHOOLS_FAILURE";
 
-<<<<<<< HEAD
-export const register = creds => dispatch => {
-    dispatch({ type: REGISTER_START });
-    axios
-        .post('https://luncher-server.herokuapp.com/api/auth/register', creds)
-        .then(res => {
-            console.log('register',res)
-            // localStorage.setItem('token',res.data.token)
-            // dispatch({ type: REGISTER_SUCCESS, payload: res.data });
-        })
-        .catch(err => dispatch({ type: REGISTER_FAILURE, payload: err.response.data.message }))
-  };
-
-
-// export const registerin = () => {
-//     return { type: REGISTER };
-//   };
-=======
 export const GET_SINGLESCHOOL_START = "GET_SINGLESCHOOL_START";
 export const GET_SINGLESCHOOL_SUCCESS = "GET_SINGLESCHOOL_SUCCESS";
 export const GET_SINGLESCHOOL_FAILURE = "GET_SINGLESCHOOL_FAILURE";
->>>>>>> 10f084b0cb38b937c15201c176b02ec292665d84
 
 export const DELETE_SCHOOL_START = "DELETE_SCHOOL_START";
 export const DELETE_SCHOOL_SUCCESS = "DELETE_SCHOOL_SUCCESS";
@@ -135,26 +105,10 @@ export const getSingleSchool = id => dispatch => {
 };
 
 export const deleteSchool = id => {
-<<<<<<< HEAD
-    const deletedSchool = axios
-        .delete(`https://luncher-server.herokuapp.com/api/admin/${id}`, {
-            headers: { Authorization: localStorage.postItem('token') } 
-        });
-    return dispatch => {
-        dispatch({ type: DELETE_SCHOOL_START });
-        deletedSchool
-        .then(schools => {
-            dispatch({ type: DELETE_SCHOOL_SUCCESS, payload: schools });
-        })
-        .catch(err => {
-            dispatch({ type: DELETE_SCHOOL_FAILURE, payload: err });
-        })
-=======
   const deletedSchool = axios.delete(
     `https://luncher-server.herokuapp.com/api/admin/${id}`,
     {
       headers: { Authorization: localStorage.getItem("token") }
->>>>>>> 10f084b0cb38b937c15201c176b02ec292665d84
     }
   );
   return dispatch => {
