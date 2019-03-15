@@ -14,7 +14,7 @@ const AdminView = props => {
       <div>
         <div className="admin-nav">
           <Link to="/add-school-form" className="add-button">Add School</Link>
-          <p>Welcome {props.username}</p>
+          <h1>Schools Administration</h1>
           <button onClick={props.logout}>Logout</button>
         </div>
         <div>

@@ -449,12 +449,6 @@ form .cvv {
 /* Add School form */
 
 .add-school {
-  /* background:linear-gradient(
-    rgba(0, 0, 0, 0.4), 
-    rgba(0, 0, 0, 0.4)
-  ), url("./assets/apple.jpg") no-repeat bottom; */
-  /* background-size: cover; */
-  /* background-attachment: fixed; */
   padding: 250px 10px;
   min-height: 40vh;
   background-color: #efefef;
@@ -466,6 +460,7 @@ form .cvv {
     margin: 0 auto 100px;
     padding-top: 15px;
     width: 400px;
+    min-height: 250px;
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
@@ -474,12 +469,29 @@ form .cvv {
     border-radius: 5px;
     border: 1px solid #efefef;
     position: relative;
-    min-height: 200px;
 }
 
 .school-name, .school-need, .school-details {
   width: 90%;
   margin: 5px 10px;
+}
+
+.add-school form span {
+  margin: 5px 5px 20px auto;
+  background: #FF7A59;
+  padding: 5px 10px;
+  border: 2px solid #FF7A59;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.add-school form span:hover {
+  background: #ff9980;
+  color: #ffffff;
+  border: 2px solid #ff9980;
 }
 
 .school-name, .school-need input, .school-details {
@@ -494,10 +506,10 @@ form .cvv {
   margin-top: 50px;
   background: #FF7A59;
   padding: 7px 30px;
-  border: 1px solid #FF7A59;
+  border: 2px solid #FF7A59;
   color: white;
   font-size: 20px;
-  border-radius: 5px;
+  border-radius: 0 0 5px 5px;
   text-decoration: none;
   cursor: pointer;
   width: 100%;
@@ -509,7 +521,6 @@ form .cvv {
   background: #ff9980;
   color: #ffffff;
   border: 2px solid #ff9980;
-  box-shadow: 1px 1px 1px 2px #9c9c9c;
 }
 
 
