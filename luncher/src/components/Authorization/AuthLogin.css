@@ -62,7 +62,7 @@
   border-radius: 16px;
   padding: 20px;
   background-color:var(--form-white);
-  /* box-shadow: rgba(131, 228, 167, 0.45) 0px 4px 30px 0px; */
+  box-shadow: rgba(131, 228, 167, 0.45) 0px 4px 30px 0px;
 }
 
 .userlogo::placeholder {
@@ -82,21 +82,18 @@ input:active {
   box-shadow: 0 0 5px rgba(81, 203, 238, 1);
 }
 
-.login-form button:focus {
+.login-form .cta:focus {
   outline: none;
   border: none;
 }
 
-input [type=text] {
-  transition: all 35s ease-in-out;
-}
 
 .login-form img {
   margin: 10px auto;
 }
 
 
-.login-form > form > button {
+.login-form > form > .cta {
   border: none;
   margin: 20px 0 0 0;
   padding: 18px;
@@ -110,28 +107,29 @@ input [type=text] {
   cursor: pointer;
 }
 
-.login-form button:hover {
+.login-form .cta:hover {
   transition: all 0.4s ease 0s;
   background: rgb(250, 97, 58);
   box-shadow: rgba(255, 122, 89, 0.518) 0px 10px 30px 0px;
   border-radius: 25px;
 }
 
+
 .luncherlogo{
   text-align: center;
   margin: 0 auto;
+  margin-bottom: 50px;
   border: 6px solid #ff7a59;
   border-radius: 50%;
-	width: 200px;
-  height: 400px;
-  justify-content: center;
-  align-items: center;
-}
+	width: 150px;
+  height: 130px;
 
+}
+/* 
 .luncherlogo img{
   margin: 0 auto;
   padding: 20px 0 0 0;
-}
+} */
 
 .login-form h1{
   margin: 10px 0 0 0 10px;

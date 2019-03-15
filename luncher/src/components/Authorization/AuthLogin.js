@@ -29,8 +29,9 @@ class LoginForm extends React.Component {
     return (
       <div className="login-form">
         <form onSubmit={e => this.handleLogin(e)}>
+        <div className="luncherlogo">
           <img src={luncherLogo} width="120" height="109" alt="" />
-          
+        </div> 
           <input
             className="userlogo"
             required
@@ -50,8 +51,9 @@ class LoginForm extends React.Component {
             onChange={this.handleChange}
             placeholder="Password"
           />
-          <button type="submit">Sign In</button>
-        <Link to="/register" className="bnt-register" ><i className="fas fa-graduation-cap"></i> Sing Up</Link>
+          <button className="cta" type="submit">Log In</button>
+        <Link to="/register" className="bnt-register" >
+        <i className="cta fas fa-graduation-cap"></i> SIGN UP</Link>
         </form>
       </div>
     );
