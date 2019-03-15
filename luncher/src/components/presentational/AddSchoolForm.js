@@ -29,13 +29,13 @@ class AddSchoolForm extends React.Component {
                 <form onSubmit={this.addSchool}>
                 <span onClick={() => this.props.history.push("/login")} ><i className="fas fa-ban" /> Cancel </span>
                     <input className="school-name" type="text" name="schoolName" value={this.state.schoolName} 
-                            placeholder="School Name" onChange={this.handleChange} />
+                            placeholder="School Name" onChange={this.handleChange} required />
                             <div className="school-need">
                             <i className="fas fa-dollar-sign" /> <input  type="number" min="0.01" step="0.01" name="needAmount" value={this.state.needAmount}
-                            placeholder="School Need Amount" onChange={this.handleChange} />
+                            placeholder="School Need Amount" onChange={this.handleChange} required />
                             </div>
                     <input className="school-details" type="text" name="details" value={this.state.details}
-                            placeholder="School Details" onChange={this.handleChange} />
+                            placeholder="School Details" onChange={this.handleChange} required/>
                     <button type="submit">Save School</button>
                 </form>
             </div>
